@@ -57,6 +57,18 @@ describe('AppState', () => {
     expect(result.current.canUndo).toBe(false);
   });
 
+  it('undo also restores the settings from before the change', async () => {
+    const A = fakePlan('A');
+    const B = fakePlan('B');
+    const { result } = setup([]);
+    act(() => result.current.applyPlan(A));
+    act(() => result.current.applyPlan(B));
+    act(() => result.current.setSettings({ ...DEFAULT_SETTINGS, dislikedFoodIds: ['black-beans'] }));
+    act(() => result.current.undo());
+    expect(result.current.plan).toBe(A);
+    expect(result.current.settings.dislikedFoodIds).toEqual([]);
+  });
+
   it('generate passes overrides on top of the settings', async () => {
     const { result, calls } = setup([fakePlan('A')]);
     await act(async () => { await result.current.generate({ locks: { milk: 1000 } }); });

@@ -10,6 +10,9 @@ import { DEFAULT_SETTINGS, defaultStore, loadSettings, saveSettings, type Settin
 export const LAST_PLAN_KEY = 'planner.lastPlan';
 const UNDO_LIMIT = 20;
 
+/** A plan you can go back to, with the settings that were in effect for it. */
+interface UndoEntry { plan: WeekPlan; settings: Settings }
+
 export interface GenerateOptions {
   /** false → return the new plan without showing it (for Now vs New). Default true. */
   apply?: boolean;
@@ -75,12 +78,12 @@ export function AppStateProvider({
   const [ready, setReady] = useState(false);
   const [settings, setSettingsState] = useState<Settings>(DEFAULT_SETTINGS);
   const [plan, setPlan] = useState<WeekPlan | null>(null);
-  const [history, setHistory] = useState<WeekPlan[]>([]);
+  const [history, setHistory] = useState<UndoEntry[]>([]);
   const [status, setStatus] = useState<AppState['status']>('idle');
   const [error, setError] = useState<string | null>(null);
   const settingsRef = useRef(settings);
   const planRef = useRef(plan);
-  const historyRef = useRef<WeekPlan[]>([]);
+  const historyRef = useRef<UndoEntry[]>([]);
 
   // Load from this device after mount, so server and first client render match.
   useEffect(() => {
@@ -106,7 +109,7 @@ export function AppStateProvider({
   const applyPlan = useCallback((p: WeekPlan) => {
     const cur = planRef.current;
     if (cur) {
-      historyRef.current = [...historyRef.current, cur].slice(-UNDO_LIMIT);
+      historyRef.current = [...historyRef.current, { plan: cur, settings: settingsRef.current }].slice(-UNDO_LIMIT);
       setHistory(historyRef.current);
     }
     planRef.current = p;
@@ -117,12 +120,15 @@ export function AppStateProvider({
   const undo = useCallback(() => {
     const h = historyRef.current;
     if (!h.length) return;
-    const prev = h[h.length - 1];
+    const { plan: prev, settings: prevSettings } = h[h.length - 1];
     historyRef.current = h.slice(0, -1);
     setHistory(historyRef.current);
     planRef.current = prev;
     setPlan(prev);
     saveLastPlan(prev);
+    settingsRef.current = prevSettings;
+    setSettingsState(prevSettings);
+    saveSettings(prevSettings);
   }, []);
 
   const generate = useCallback(

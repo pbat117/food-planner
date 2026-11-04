@@ -1,27 +1,73 @@
 'use client';
 
-import { Lock, RefreshCw } from 'lucide-react';
+import { Lock, RefreshCw, Undo2 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import type { WeekPlan } from '@/engine/planWeek';
 import type { ListRow, WeeklyList } from '@/engine/weeklyList';
+import { getFood } from '@/data/foods';
+import { type Settings, setPref } from '@/lib/settings';
 import { useAppState } from '@/state/AppState';
 import { GroupedList } from '@/ui/GroupedList';
 import { NavHeader } from '@/ui/NavHeader';
+import { CompareSheet } from './CompareSheet';
 import { NutrientReportSheet } from './NutrientReportSheet';
+import { RowActions } from './RowActions';
+
+interface Proposal { plan: WeekPlan; title: string; settings?: Settings }
 
 const fmt = (n: number) => Math.round(n).toLocaleString('en-US');
 
 export function WeekScreen() {
-  const { ready, plan, list, status, error, generate } = useAppState();
+  const { ready, plan, list, status, error, generate, applyPlan, undo, canUndo, settings, setSettings } = useAppState();
   const [report, setReport] = useState(false);
+  const [rowFood, setRowFood] = useState<string | null>(null);
+  const [proposal, setProposal] = useState<Proposal | null>(null);
   const solving = status === 'solving';
 
-  const addFood = async (foodId: string, addGrams: number) => {
+  const propose = async (title: string, overrides: Parameters<typeof generate>[0], next?: Settings) => {
+    const p = await generate(overrides, { apply: false, settings: next });
+    if (p) setProposal({ plan: p, title, settings: next });
+  };
+
+  const addFood = (foodId: string, addGrams: number) => {
     if (!plan) return;
     const current = plan.items.find((i) => i.foodId === foodId)?.grams ?? 0;
-    await generate({ locks: { ...plan.input.locks, [foodId]: current + addGrams } });
+    void propose(`Adding ${addGrams} g ${getFood(foodId).name.toLowerCase()}.`, { locks: { ...plan.input.locks, [foodId]: current + addGrams } });
   };
+
+  const dislike = (foodId: string) => {
+    const next = setPref(settings, foodId, 'disliked');
+    const regularItems = { ...next.regularItems };
+    delete regularItems[foodId];
+    setRowFood(null);
+    void propose(`Without ${getFood(foodId).name.toLowerCase()}, rebalanced.`, {}, { ...next, regularItems });
+  };
+
+  const removeFromYours = (foodId: string) => {
+    setRowFood(null);
+    void propose(`${getFood(foodId).name} is no longer always included.`, {}, setPref(settings, foodId, 'liked'));
+  };
+
+  const rebalance = (foodId: string, grams: number) => {
+    if (!plan) return;
+    setRowFood(null);
+    void propose(`${getFood(foodId).name} fixed at ${grams.toLocaleString('en-US')} g; the rest rebalanced.`, { locks: { ...plan.input.locks, [foodId]: grams } });
+  };
+
+  const apply = () => {
+    if (!proposal) return;
+    applyPlan(proposal.plan); // first, so Undo remembers the settings from before the change
+    if (proposal.settings) setSettings(proposal.settings);
+    setProposal(null);
+  };
+
+  const undoButton = canUndo ? (
+    <button type="button" onClick={undo} disabled={solving} aria-label="Undo last change"
+      className="flex min-h-11 items-center gap-1 text-body text-tint disabled:opacity-40">
+      <Undo2 className="size-5" />Undo
+    </button>
+  ) : undefined;
 
   const regenerate = (
     <button type="button" onClick={() => generate()} disabled={solving} aria-label="Make a new plan"
@@ -34,7 +80,7 @@ export function WeekScreen() {
 
   return (
     <>
-      <NavHeader title="This Week" trailing={plan ? regenerate : undefined} />
+      <NavHeader title="This Week" leading={undoButton} trailing={plan ? regenerate : undefined} />
       {error && (
         <p role="alert" className="mx-4 mb-4 rounded-[10px] bg-cell px-4 py-3 text-subhead text-red">
           {error}{plan ? ' Your last plan is still shown.' : ''}
@@ -47,7 +93,7 @@ export function WeekScreen() {
           <Summary plan={plan} list={list} onReport={() => setReport(true)} />
           {list.sections.map((s) => (
             <GroupedList key={s.title} header={s.title}>
-              {s.rows.map((r) => <ItemRow key={r.foodId} row={r} />)}
+              {s.rows.map((r) => <ItemRow key={r.foodId} row={r} onClick={r.foodId.startsWith('supp:') ? undefined : () => setRowFood(r.foodId)} />)}
             </GroupedList>
           ))}
           <DailyAverage list={list} />
@@ -55,7 +101,15 @@ export function WeekScreen() {
             {list.notes.map((n) => <p key={n} className="px-4 py-2.5 text-subhead">{n}</p>)}
           </GroupedList>
           <NutrientReportSheet open={report} onClose={() => setReport(false)} plan={plan} list={list} busy={solving}
-            onAddFood={(id, g) => { setReport(false); void addFood(id, g); }} />
+            onAddFood={(id, g) => { setReport(false); addFood(id, g); }} />
+          {rowFood && (
+            <RowActions plan={plan} foodId={rowFood} busy={solving} onClose={() => setRowFood(null)}
+              onDislike={() => dislike(rowFood)} onRemoveFromYours={() => removeFromYours(rowFood)}
+              onUseAmount={(p) => { applyPlan(p); setRowFood(null); }} onRebalance={(g) => rebalance(rowFood, g)} />
+          )}
+          {proposal && (
+            <CompareSheet open title={proposal.title} now={plan} next={proposal.plan} onApply={apply} onClose={() => setProposal(null)} />
+          )}
         </>
       )}
     </>
@@ -121,9 +175,10 @@ function Summary({ plan, list, onReport }: { plan: WeekPlan; list: WeeklyList; o
   );
 }
 
-function ItemRow({ row }: { row: ListRow }) {
+function ItemRow({ row, onClick }: { row: ListRow; onClick?: () => void }) {
+  const Tag = onClick ? 'button' : 'div';
   return (
-    <div className="flex min-h-11 items-start gap-3 px-4 py-2.5">
+    <Tag {...(onClick ? { type: 'button' as const, onClick } : {})} className="flex min-h-11 w-full items-start gap-3 px-4 py-2.5 text-left enabled:active:bg-cell-pressed">
       <span className="min-w-0 flex-1">
         <span className="flex items-center gap-1.5 text-body">
           {row.name}
@@ -133,7 +188,7 @@ function ItemRow({ row }: { row: ListRow }) {
         {row.dailyHint && <span className="block text-footnote text-secondary">{row.dailyHint}</span>}
       </span>
       <span className="max-w-[45%] pt-0.5 text-right text-subhead text-secondary">{row.itemsText}</span>
-    </div>
+    </Tag>
   );
 }
 
