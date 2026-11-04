@@ -111,6 +111,8 @@ export interface PlanInput {
   supplementedNutrients: NutrientId[];
   /** Default 15. */
   maxDistinctFoods: number;
+  /** Always include fruit: at least gramsPerDay (×7 for the week), from at most maxKinds different fruits. */
+  fruit?: { gramsPerDay: number; maxKinds: number };
 }
 
 export interface OptimizeResult {

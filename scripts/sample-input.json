@@ -1,19 +1,25 @@
 {
   "profile": {
-    "age": 30,
+    "age": 20,
     "sex": "male",
-    "heightCm": 180,
-    "weightKg": 80,
+    "heightCm": 193,
+    "weightKg": 77.1,
     "activity": "moderate",
     "goal": "maintain",
-    "proteinGoal": { "mode": "gPerKg", "value": 1.6 }
+    "proteinGoal": { "mode": "gPerDay", "value": 136 }
   },
   "liked": [
     "ground-beef-85", "chicken-breast", "eggs", "black-beans", "brown-rice", "oats",
     "potato", "sweet-potato", "spinach", "broccoli", "red-pepper",
     "banana", "orange", "kiwi", "avocado", "blackberries",
-    "almonds", "greek-yogurt", "milk", "olive-oil", "walnuts", "chia-seeds"
+    "almonds", "greek-yogurt", "milk", "olive-oil"
   ],
   "disliked": [],
-  "maxDistinctFoods": 18
+  "maxDistinctFoods": 18,
+  "fruit": { "gramsPerDay": 300, "maxKinds": 5 },
+  "supplements": [
+    { "nutrient": "vitD", "dailyDose": 25, "label": "Vitamin D3 1,000 IU" },
+    { "nutrient": "epaDha", "dailyDose": 300, "label": "Fish oil (300 mg EPA+DHA)" }
+  ],
+  "supplementedNutrients": ["vitD", "epaDha"]
 }

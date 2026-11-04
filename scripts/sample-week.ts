@@ -9,9 +9,12 @@ import { NUTRIENTS, UNTRACKED_NUTRIENTS } from '@/data/nutrients';
 import { explainHigh, suggestForLow } from '@/engine/advisor';
 import { planWeek } from '@/engine/planWeek';
 import { computeWeeklyTargets } from '@/engine/targets';
-import type { NutrientId, Profile } from '@/engine/types';
+import type { NutrientId, PlanInput, Profile, SupplementUse } from '@/engine/types';
 
-interface SampleInput { profile: Profile; liked: string[]; disliked: string[]; maxDistinctFoods: number }
+interface SampleInput {
+  profile: Profile; liked: string[]; disliked: string[]; maxDistinctFoods: number;
+  fruit?: PlanInput['fruit']; supplements?: SupplementUse[]; supplementedNutrients?: NutrientId[];
+}
 
 const pad = (s: string, n: number) => (s.length >= n ? s : s + ' '.repeat(n - s.length));
 const fmt = (v: number) => (v >= 100 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1));
@@ -23,7 +26,8 @@ async function main(): Promise<void> {
   const t0 = Date.now();
   const plan = await planWeek({
     targets, likedFoodIds: input.liked, dislikedFoodIds: input.disliked, recipes: [], locks: {},
-    supplements: [], supplementedNutrients: [], maxDistinctFoods: input.maxDistinctFoods,
+    supplements: input.supplements ?? [], supplementedNutrients: input.supplementedNutrients ?? [],
+    maxDistinctFoods: input.maxDistinctFoods, fruit: input.fruit,
   });
 
   console.log(`\nWEEKLY LIST (${plan.items.length} foods, solved in ${Date.now() - t0} ms)\n`);

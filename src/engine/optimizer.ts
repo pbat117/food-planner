@@ -68,6 +68,24 @@ export function buildLp(input: PlanInput): Model {
   const maxNew = Math.max(0, input.maxDistinctFoods - lockedIds.size - recipeFoodsOutside.size);
   if (candidates.length) rows.push(`distinct: ${candidates.map((_, i) => `+ y${i}`).join(' ')} <= ${maxNew}`);
 
+  if (input.fruit) {
+    const fruitIdx = candidates.flatMap((f, i) => (f.category === 'fruit' ? [i] : []));
+    const lockedFruit = Object.entries(input.locks).filter(([id, g]) => g > 0 && getFood(id).category === 'fruit');
+    const recipeFruitGrams = input.recipes.reduce((s, r) => s + r.count * r.ingredients
+      .filter((g) => getFood(g.foodId).category === 'fruit').reduce((t, g) => t + g.grams, 0), 0);
+    const fixedFruit = lockedFruit.reduce((s, [, g]) => s + g, 0) + recipeFruitGrams;
+    const need = 7 * input.fruit.gramsPerDay - fixedFruit;
+    if (fruitIdx.length) {
+      const kinds = Math.max(0, input.fruit.maxKinds - lockedFruit.length);
+      rows.push(`fruitkinds: ${fruitIdx.map((i) => `+ y${i}`).join(' ')} <= ${kinds}`);
+      if (need > EPS) {
+        // Soft (heavily weighted) so a plan is still returned if the fruit cap makes it impossible.
+        rows.push(`fruit: ${fruitIdx.map((i) => `+ x${i}`).join('\n ')}\n + 1 fr >= ${num(need)}`);
+        objective.push(`+ ${num(HARD / need)} fr`);
+      }
+    }
+  }
+
   const supplemented = new Set(input.supplementedNutrients);
   (Object.keys(targets.nutrients) as NutrientId[]).forEach((id, k) => {
     const t = targets.nutrients[id];
