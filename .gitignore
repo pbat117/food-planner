@@ -42,3 +42,4 @@ next-env.d.ts
 
 # superpowers workspace
 .superpowers/
+public/highs.wasm

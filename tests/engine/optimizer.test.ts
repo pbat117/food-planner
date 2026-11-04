@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest';
+import path from 'node:path';
+import { configureHighs } from '@/engine/optimizer';
 import { buildLp, optimize } from '@/engine/optimizer';
 import { analyze } from '@/engine/analyze';
 import { getFood } from '@/data/foods';
@@ -63,5 +65,19 @@ describe('optimize', () => {
     const r = await optimize({ ...base, likedFoodIds: [] });
     expect(Date.now() - t0).toBeLessThan(6000);
     expect(Object.keys(r.amounts).length).toBeGreaterThan(0);
+  });
+});
+
+describe('configureHighs', () => {
+  it('passes locateFile to the loader', async () => {
+    const seen: string[] = [];
+    configureHighs({ locateFile: (f) => { seen.push(f); return path.resolve('node_modules/highs/build', f); } });
+    try {
+      const r = await optimize({ ...base, maxDistinctFoods: 10 });
+      expect(r.status).toBe('optimal');
+      expect(seen).toContain('highs.wasm');
+    } finally {
+      configureHighs({});
+    }
   });
 });

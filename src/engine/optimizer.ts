@@ -5,8 +5,17 @@ import type { Food, NutrientId, OptimizeResult, PlanInput } from './types';
 
 type Highs = Awaited<ReturnType<typeof highsLoader>>;
 let highsPromise: Promise<Highs> | null = null;
+let highsOptions: { locateFile?: (file: string) => string } = {};
+
+/** Where to find highs.wasm (the browser worker serves it from /). Resets the cached solver. */
+export function configureHighs(opts: { locateFile?: (file: string) => string }): void {
+  highsOptions = opts;
+  highsPromise = null;
+}
+
 function loadHighs(): Promise<Highs> {
-  highsPromise ??= highsLoader();
+  highsPromise ??= highsLoader(highsOptions.locateFile ? { locateFile: highsOptions.locateFile } : {});
+  highsPromise.catch(() => { highsPromise = null; });
   return highsPromise;
 }
 
