@@ -47,6 +47,8 @@ const MAP: { ours: NutrientId; fdc: number[]; factor: number; sum?: boolean; zer
   { ours: 'epaDha', fdc: [1278, 1272], factor: 1000, sum: true, zeroOk: true },
 ];
 
+const TOTAL_SUGARS = 2000;
+
 /** Minimal CSV parser for quoted, comma-separated rows. */
 function parseCsvLine(line: string): string[] {
   const out: string[] = [];
@@ -107,6 +109,12 @@ function main(): void {
       }
       const raw = m.sum ? found.reduce((t, id) => t + a.get(id)!, 0) : a.get(found[0])!;
       per100g[m.ours] = Math.round(raw * m.factor * 1000) / 1000;
+    }
+    // SR Legacy has no added-sugar values; for sweeteners all sugar is added (FDC 2000 = total sugars).
+    if (s.addedSugarIsTotalSugar === 'y') {
+      const total = a.get(TOTAL_SUGARS);
+      if (total === undefined) throw new Error(`${s.id}: no total sugars value`);
+      per100g.addedSugar = total;
     }
     return {
       id: s.id,

@@ -1,201 +1,201 @@
-id,fdcId,name,category,aisle,unitName,unitPlural,unitGrams,roundTo,shelfLifeDays,maxWeeklyGrams,minGrams,dailyHint
-ground-beef-85,171796,Ground beef 85/15,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-ground-beef-90,174030,Ground beef 90/10,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-ground-beef-80,174036,Ground beef 80/20,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-beef-sirloin,168726,Sirloin steak,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-beef-liver,169451,Beef liver,protein,Meat & Fish,pack,packs,454,50,2,300,100
-bison-ground,175293,Ground bison,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-lamb-ground,174370,Ground lamb,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-chicken-breast,171077,Chicken breast,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-chicken-thigh,173627,Chicken thighs,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-chicken-drumstick,173614,Chicken drumsticks,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-chicken-ground,171116,Ground chicken,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-turkey-ground,171505,Ground turkey,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-turkey-breast,171098,Turkey breast,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-pork-tenderloin,168249,Pork tenderloin,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-pork-chop,167829,Pork chops,protein,Meat & Fish,pack,packs,454,50,3,1400,200
-eggs,171287,Eggs,protein,Dairy & Eggs,egg,eggs,50,unit,28,1200,100
-egg-whites,172183,Egg whites (carton),protein,Dairy & Eggs,cup,cups,243,50,7,1500,100
-salmon,175167,Salmon (farmed),protein,Meat & Fish,fillet,fillets,170,50,2,1000,150
-salmon-wild,173686,Salmon (wild),protein,Meat & Fish,fillet,fillets,170,50,2,1000,150
-salmon-canned,173690,Canned salmon,protein,Pantry,can,cans,418,unit,365,700,100
-tuna-canned,173709,"Canned tuna (light, in water)",protein,Pantry,can,cans,142,unit,365,600,142
-sardines,175139,Sardines (canned in oil),protein,Pantry,can,cans,92,unit,365,460,92
-cod,171955,Cod,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150
-tilapia,175176,Tilapia,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150
-mackerel,175119,Mackerel,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150
-trout,173717,Rainbow trout,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150
-halibut,174200,Halibut,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150
-pollock,175129,Pollock,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150
-anchovies,174183,Anchovies (canned),protein,Pantry,can,cans,56,unit,365,112,28
-shrimp,174210,Shrimp,protein,Meat & Fish,pack,packs,454,50,2,1000,150
-mussels,174216,Mussels,protein,Meat & Fish,bag,bags,907,100,2,1000,200
-scallops,174220,Scallops,protein,Meat & Fish,pack,packs,454,50,2,800,150
-tofu,172475,Firm tofu,protein,Dairy & Eggs,block,blocks,396,unit,7,1600,200
-tempeh,174272,Tempeh,protein,Dairy & Eggs,pack,packs,227,unit,10,900,227
-edamame,168411,"Edamame (frozen, shelled)",protein,Frozen,bag,bags,340,50,180,1000,100
-whey-protein,173177,Whey protein isolate,protein,Pantry,scoop,scoops,30,30,365,420,30,about 1 scoop a day
-greek-yogurt,170894,"Greek yogurt (nonfat, plain)",dairy,Dairy & Eggs,cup,cups,245,50,14,2000,150
-greek-yogurt-lowfat,170903,"Greek yogurt (2%, plain)",dairy,Dairy & Eggs,cup,cups,245,50,14,2000,150
-yogurt-plain,171284,Plain yogurt (whole milk),dairy,Dairy & Eggs,cup,cups,245,50,14,2000,150
-yogurt-lowfat,170886,Plain yogurt (low fat),dairy,Dairy & Eggs,cup,cups,245,50,14,2000,150
-milk,171267,Milk (2%),dairy,Dairy & Eggs,cup,cups,244,250,10,3500,250
-milk-whole,171265,Milk (whole),dairy,Dairy & Eggs,cup,cups,244,250,10,3500,250
-milk-skim,171269,Milk (skim),dairy,Dairy & Eggs,cup,cups,245,250,10,3500,250
-soy-milk,172456,Soy milk (fortified),dairy,Dairy & Eggs,cup,cups,243,250,10,3500,250
-kefir,170904,"Kefir (low fat, plain)",dairy,Dairy & Eggs,cup,cups,243,250,14,2000,250
-cottage-cheese,172182,Cottage cheese (2%),dairy,Dairy & Eggs,cup,cups,226,50,10,1600,100
-cheddar,173414,Cheddar cheese,dairy,Dairy & Eggs,slice,slices,28,25,28,300,50
-mozzarella,170847,Mozzarella (part skim),dairy,Dairy & Eggs,slice,slices,28,25,21,300,50
-parmesan,171247,Parmesan (grated),dairy,Dairy & Eggs,tbsp,tbsp,5,10,60,100,20
-feta,173420,Feta cheese,dairy,Dairy & Eggs,block,blocks,170,25,21,250,50
-swiss,171251,Swiss cheese,dairy,Dairy & Eggs,slice,slices,28,25,28,300,50
-ricotta,171248,Ricotta (part skim),dairy,Dairy & Eggs,cup,cups,246,50,10,500,100
-butter,173430,Butter (unsalted),fat,Dairy & Eggs,tbsp,tbsp,14,10,60,140,14
-black-beans,175238,"Black beans (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125
-chickpeas,173757,"Chickpeas (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125
-lentils,172421,Lentils (cooked),protein,Pantry,cup cooked,cups cooked,198,50,365,1500,100
-kidney-beans,173740,"Kidney beans (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125
-pinto-beans,175200,"Pinto beans (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125
-navy-beans,173746,"Navy beans (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125
-split-peas,172429,Split peas (cooked),protein,Pantry,cup cooked,cups cooked,196,50,365,1200,100
-soybeans,174271,Soybeans (cooked),protein,Pantry,cup cooked,cups cooked,172,50,365,1000,100
-hummus,174289,Hummus,fat,Dairy & Eggs,tub,tubs,283,50,7,600,50
-peanut-butter,172470,Peanut butter (no salt),fat,Pantry,tbsp,tbsp,16,10,180,300,30
-brown-rice,169703,Brown rice (dry),carb,Pantry,cup dry,cups dry,185,50,180,1500,100
-white-rice,168877,White rice (dry),carb,Pantry,cup dry,cups dry,185,50,180,1500,100
-wild-rice,169726,Wild rice (dry),carb,Pantry,cup dry,cups dry,160,50,180,1500,100
-oats,169705,Rolled oats (dry),carb,Pantry,cup dry,cups dry,81,50,180,1500,100
-quinoa,168874,Quinoa (dry),carb,Pantry,cup dry,cups dry,170,50,180,1500,100
-whole-wheat-pasta,169738,Whole-wheat pasta (dry),carb,Pantry,box,boxes,454,50,180,1500,100
-pasta,169736,Pasta (dry),carb,Pantry,box,boxes,454,50,180,1500,100
-whole-wheat-bread,172688,Whole-wheat bread,carb,Pantry,slice,slices,32,unit,7,900,64
-corn-tortillas,175036,Corn tortillas,carb,Pantry,tortilla,tortillas,26,unit,14,600,52
-barley,170284,Pearl barley (dry),carb,Pantry,cup dry,cups dry,200,50,180,1500,100
-couscous,169699,Couscous (dry),carb,Pantry,cup dry,cups dry,173,50,180,1500,100
-bulgur,170688,Bulgur (dry),carb,Pantry,cup dry,cups dry,140,50,180,1500,100
-millet,169702,Millet (dry),carb,Pantry,cup dry,cups dry,200,50,180,1500,100
-buckwheat,170685,Buckwheat groats (dry),carb,Pantry,cup dry,cups dry,164,50,180,1500,100
-popcorn,167959,Popcorn (air-popped),carb,Pantry,cup,cups,8,10,180,200,20
-potato,170026,Potatoes,carb,Produce,medium,medium,213,unit,30,2000,150
-sweet-potato,168482,Sweet potatoes,carb,Produce,small,small,130,unit,21,2000,130
-spinach,168462,Spinach,vegetable,Produce,large bag,large bags,250,unit,5,1000,100
-kale,168421,Kale,vegetable,Produce,bunch,bunches,200,unit,7,800,100
-broccoli,170379,Broccoli,vegetable,Produce,head,heads,600,unit,7,1500,150
-cauliflower,169986,Cauliflower,vegetable,Produce,head,heads,575,unit,7,1500,150
-carrots,170393,Carrots,vegetable,Produce,carrot,carrots,61,unit,21,1000,61
-red-pepper,170108,Red bell pepper,vegetable,Produce,pepper,peppers,120,unit,10,1000,60
-green-pepper,170427,Green bell pepper,vegetable,Produce,pepper,peppers,120,unit,10,1000,60
-yellow-pepper,169383,Yellow bell pepper,vegetable,Produce,pepper,peppers,120,unit,10,1000,60
-tomato,170457,Tomatoes,vegetable,Produce,tomato,tomatoes,123,unit,7,1200,100
-cucumber,168409,Cucumber,vegetable,Produce,cucumber,cucumbers,300,unit,7,1200,150
-zucchini,169291,Zucchini,vegetable,Produce,zucchini,zucchini,200,unit,7,1200,150
-onion,170000,Onions,vegetable,Produce,onion,onions,110,unit,30,800,55
-garlic,169230,Garlic,vegetable,Produce,clove,cloves,3,unit,60,70,6
-mushrooms,169251,White mushrooms,vegetable,Produce,pack,packs,227,unit,7,1000,100
-shiitake,169242,Shiitake mushrooms,vegetable,Produce,pack,packs,100,unit,7,500,50
-portobello,169255,Portobello mushrooms,vegetable,Produce,cap,caps,85,unit,7,700,85
-asparagus,168389,Asparagus,vegetable,Produce,bunch,bunches,450,unit,4,1000,150
-green-beans,169961,Green beans,vegetable,Produce,bag,bags,340,50,7,1000,100
-brussels-sprouts,170383,Brussels sprouts,vegetable,Produce,bag,bags,340,50,7,1000,100
-cabbage,169975,Cabbage,vegetable,Produce,head,heads,900,unit,30,1500,150
-red-cabbage,169977,Red cabbage,vegetable,Produce,head,heads,900,unit,30,1500,150
-savoy-cabbage,170388,Savoy cabbage,vegetable,Produce,head,heads,700,unit,21,1500,150
-romaine,169247,Romaine lettuce,vegetable,Produce,head,heads,600,unit,7,1200,100
-green-leaf-lettuce,169249,Green leaf lettuce,vegetable,Produce,head,heads,360,unit,5,1000,100
-arugula,169387,Arugula,vegetable,Produce,container,containers,142,unit,5,600,50
-watercress,170068,Watercress,vegetable,Produce,bunch,bunches,100,unit,4,400,50
-celery,169988,Celery,vegetable,Produce,stalk,stalks,40,unit,21,800,40
-beets,169145,Beets,vegetable,Produce,beet,beets,82,unit,21,800,82
-butternut-squash,169295,Butternut squash,vegetable,Produce,squash,squash,1000,50,60,1500,200
-acorn-squash,168472,Acorn squash,vegetable,Produce,squash,squash,430,unit,60,1500,200
-corn,169998,Corn on the cob,vegetable,Produce,ear,ears,90,unit,3,900,90
-eggplant,169228,Eggplant,vegetable,Produce,eggplant,eggplants,450,unit,7,1000,200
-bok-choy,170390,Bok choy,vegetable,Produce,head,heads,450,unit,5,1000,100
-swiss-chard,169991,Swiss chard,vegetable,Produce,bunch,bunches,300,unit,5,900,100
-collards,170406,Collard greens,vegetable,Produce,bunch,bunches,400,unit,7,900,100
-green-onions,170005,Green onions,vegetable,Produce,bunch,bunches,100,unit,7,300,25
-radishes,169276,Radishes,vegetable,Produce,bunch,bunches,200,unit,14,500,50
-okra,169260,Okra,vegetable,Produce,bag,bags,340,50,4,800,100
-turnips,170465,Turnips,vegetable,Produce,turnip,turnips,120,unit,21,800,120
-parsnips,170417,Parsnips,vegetable,Produce,parsnip,parsnips,130,unit,21,800,130
-fennel,169385,Fennel,vegetable,Produce,bulb,bulbs,230,unit,7,700,115
-kohlrabi,168424,Kohlrabi,vegetable,Produce,bulb,bulbs,200,unit,14,700,100
-snap-peas,170010,Snap peas,vegetable,Produce,bag,bags,227,unit,5,800,100
-pumpkin-canned,168450,Canned pumpkin (no salt),vegetable,Pantry,can,cans,425,unit,365,900,200
-canned-tomatoes,170051,Canned tomatoes,vegetable,Pantry,can,cans,411,unit,365,1650,200
-tomato-paste,170459,Tomato paste (no salt),vegetable,Pantry,can,cans,170,unit,365,340,50
-frozen-spinach,169287,Frozen spinach,vegetable,Frozen,bag,bags,340,unit,180,1400,150
-frozen-broccoli,169968,Frozen broccoli,vegetable,Frozen,bag,bags,340,unit,180,1400,150
-frozen-mixed-veg,170471,Frozen mixed vegetables,vegetable,Frozen,bag,bags,454,unit,180,1400,150
-frozen-peas,170016,Frozen peas,vegetable,Frozen,bag,bags,454,unit,180,1400,150
-frozen-corn,168398,Frozen corn,vegetable,Frozen,bag,bags,454,unit,180,1400,150
-parsley,170416,Parsley,vegetable,Produce,bunch,bunches,60,unit,7,180,30
-cilantro,169997,Cilantro,vegetable,Produce,bunch,bunches,50,unit,7,150,25
-ginger,169231,Ginger,vegetable,Produce,knob,knobs,30,unit,21,90,10
-jalapeno,168576,Jalapeños,vegetable,Produce,pepper,peppers,14,unit,10,140,14
-banana,173944,Bananas,fruit,Produce,,,118,unit,5,1400,100
-apple,171688,Apples,fruit,Produce,,,182,unit,30,1400,100
-orange,169097,Oranges,fruit,Produce,,,131,unit,21,1400,100
-kiwi,168153,Kiwis,fruit,Produce,,,75,unit,14,900,75
-avocado,171705,Avocados,fruit,Produce,,,150,unit,5,1050,75
-blackberries,173946,Blackberries,fruit,Produce,small container,small containers,170,unit,4,1400,100
-blueberries,171711,Blueberries,fruit,Produce,pint,pints,340,unit,7,1400,100
-strawberries,167762,Strawberries,fruit,Produce,container,containers,454,unit,4,1400,100
-raspberries,167755,Raspberries,fruit,Produce,small container,small containers,170,unit,3,1400,100
-grapes,174683,Grapes,fruit,Produce,bag,bags,900,50,7,1400,150
-pear,169118,Pears,fruit,Produce,,,178,unit,7,1400,100
-peach,169928,Peaches,fruit,Produce,,,150,unit,4,1400,100
-nectarine,169914,Nectarines,fruit,Produce,,,142,unit,4,1400,100
-plum,169949,Plums,fruit,Produce,,,66,unit,5,900,66
-mango,169910,Mangoes,fruit,Produce,,,336,unit,5,1400,100
-pineapple,169124,Pineapple,fruit,Produce,pineapple,pineapples,905,50,5,1400,150
-watermelon,167765,Watermelon,fruit,Produce,mini watermelon,mini watermelons,1800,100,7,2000,200
-cantaloupe,169092,Cantaloupe,fruit,Produce,melon,melons,550,unit,7,1400,275
-honeydew,169911,Honeydew,fruit,Produce,melon,melons,1000,unit,7,1400,250
-cherries,171719,Cherries,fruit,Produce,bag,bags,450,50,5,900,100
-grapefruit,174673,Grapefruit,fruit,Produce,,,246,unit,21,1400,100
-clementine,169105,Clementines,fruit,Produce,,,74,unit,14,1000,74
-lemon,167746,Lemons,fruit,Produce,,,58,unit,21,350,29
-lime,168155,Limes,fruit,Produce,,,44,unit,21,270,22
-papaya,169926,Papaya,fruit,Produce,,,450,unit,5,1400,100
-pomegranate,169134,Pomegranates,fruit,Produce,,,280,unit,30,1400,100
-apricot,171697,Apricots,fruit,Produce,,,35,unit,5,700,70
-guava,173044,Guavas,fruit,Produce,,,55,unit,5,700,55
-persimmon,169941,Persimmons,fruit,Produce,,,168,unit,7,1400,100
-dates,168191,Medjool dates,fruit,Pantry,date,dates,24,unit,180,350,48
-raisins,168165,Raisins,fruit,Pantry,small box,small boxes,43,unit,180,300,43
-dried-apricots,173941,Dried apricots,fruit,Pantry,handful,handfuls,40,10,180,300,40
-prunes,168162,Prunes,fruit,Pantry,prune,prunes,10,10,180,300,40
-dried-figs,174665,Dried figs,fruit,Pantry,fig,figs,8,10,180,300,40
-frozen-blueberries,173950,Frozen blueberries,fruit,Frozen,bag,bags,454,unit,180,1400,150
-frozen-strawberries,168173,Frozen strawberries,fruit,Frozen,bag,bags,454,unit,180,1400,150
-almonds,170567,Almonds,fat,Pantry,handful,handfuls,30,10,180,350,30,"30 g a day, a small handful"
-walnuts,170187,Walnuts,fat,Pantry,handful,handfuls,30,10,180,350,30,"30 g a day, a small handful"
-cashews,170162,Cashews,fat,Pantry,handful,handfuls,30,10,180,350,30,
-pistachios,170184,Pistachios,fat,Pantry,handful,handfuls,30,10,180,350,30,
-peanuts,172430,Peanuts,fat,Pantry,handful,handfuls,30,10,180,350,30,
-pecans,170182,Pecans,fat,Pantry,handful,handfuls,30,10,180,350,30,
-brazil-nuts,170569,Brazil nuts,fat,Pantry,nut,nuts,5,5,180,35,5,1 nut a day is plenty (very high in selenium)
-hazelnuts,170581,Hazelnuts,fat,Pantry,handful,handfuls,30,10,180,350,30,
-macadamia,170178,Macadamia nuts,fat,Pantry,handful,handfuls,30,10,180,350,30,
-chia-seeds,170554,Chia seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20
-flaxseed,169414,Ground flaxseed,fat,Pantry,tbsp,tbsp,10,10,180,210,20
-pumpkin-seeds,170556,Pumpkin seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20
-sunflower-seeds,170562,Sunflower seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20
-hemp-seeds,170148,Hemp seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20
-sesame-seeds,170150,Sesame seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20
-tahini,170189,Tahini,fat,Pantry,tbsp,tbsp,15,10,180,210,15
-almond-butter,168588,Almond butter (no salt),fat,Pantry,tbsp,tbsp,16,10,180,300,30
-coconut,170169,Coconut (fresh),fat,Produce,cup shredded,cups shredded,80,10,7,200,40
-olives,169094,Olives (canned),fat,Pantry,can,cans,170,25,365,350,50
-olive-oil,171413,Olive oil,fat,Pantry,tbsp,tbsp,14,10,365,210,14,1–2 tbsp a day for cooking
-avocado-oil,173573,Avocado oil,fat,Pantry,tbsp,tbsp,14,10,365,210,14
-canola-oil,172336,Canola oil,fat,Pantry,tbsp,tbsp,14,10,365,210,14
-dark-chocolate,170273,Dark chocolate (70–85%),other,Pantry,square,squares,10,10,180,140,20
-soy-sauce,174277,Soy sauce,other,Pantry,tbsp,tbsp,16,10,365,100,10
-honey,169640,Honey,other,Pantry,tbsp,tbsp,21,10,365,140,10
-maple-syrup,169661,Maple syrup,other,Pantry,tbsp,tbsp,20,10,365,140,10
-salsa,174524,Salsa,vegetable,Pantry,jar,jars,454,50,14,450,50
-mustard,172234,Mustard,other,Pantry,tsp,tsp,5,5,365,70,5
-cinnamon,171320,Cinnamon (ground),other,Pantry,tsp,tsp,3,5,365,30,5
+id,fdcId,name,category,aisle,unitName,unitPlural,unitGrams,roundTo,shelfLifeDays,maxWeeklyGrams,minGrams,dailyHint,addedSugarIsTotalSugar
+ground-beef-85,171796,Ground beef 85/15,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+ground-beef-90,174030,Ground beef 90/10,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+ground-beef-80,174036,Ground beef 80/20,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+beef-sirloin,168726,Sirloin steak,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+beef-liver,169451,Beef liver,protein,Meat & Fish,pack,packs,454,50,2,300,100,,
+bison-ground,175293,Ground bison,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+lamb-ground,174370,Ground lamb,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+chicken-breast,171077,Chicken breast,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+chicken-thigh,173627,Chicken thighs,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+chicken-drumstick,173614,Chicken drumsticks,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+chicken-ground,171116,Ground chicken,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+turkey-ground,171505,Ground turkey,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+turkey-breast,171098,Turkey breast,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+pork-tenderloin,168249,Pork tenderloin,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+pork-chop,167829,Pork chops,protein,Meat & Fish,pack,packs,454,50,3,1400,200,,
+eggs,171287,Eggs,protein,Dairy & Eggs,egg,eggs,50,unit,28,1200,100,,
+egg-whites,172183,Egg whites (carton),protein,Dairy & Eggs,cup,cups,243,50,7,1500,100,,
+salmon,175167,Salmon (farmed),protein,Meat & Fish,fillet,fillets,170,50,2,1000,150,,
+salmon-wild,173686,Salmon (wild),protein,Meat & Fish,fillet,fillets,170,50,2,1000,150,,
+salmon-canned,173690,Canned salmon,protein,Pantry,can,cans,418,unit,365,700,100,,
+tuna-canned,173709,"Canned tuna (light, in water)",protein,Pantry,can,cans,142,unit,365,600,142,,
+sardines,175139,Sardines (canned in oil),protein,Pantry,can,cans,92,unit,365,460,92,,
+cod,171955,Cod,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150,,
+tilapia,175176,Tilapia,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150,,
+mackerel,175119,Mackerel,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150,,
+trout,173717,Rainbow trout,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150,,
+halibut,174200,Halibut,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150,,
+pollock,175129,Pollock,protein,Meat & Fish,fillet,fillets,170,50,2,1000,150,,
+anchovies,174183,Anchovies (canned),protein,Pantry,can,cans,56,unit,365,112,28,,
+shrimp,174210,Shrimp,protein,Meat & Fish,pack,packs,454,50,2,1000,150,,
+mussels,174216,Mussels,protein,Meat & Fish,bag,bags,907,100,2,1000,200,,
+scallops,174220,Scallops,protein,Meat & Fish,pack,packs,454,50,2,800,150,,
+tofu,172475,Firm tofu,protein,Dairy & Eggs,block,blocks,396,unit,7,1600,200,,
+tempeh,174272,Tempeh,protein,Dairy & Eggs,pack,packs,227,unit,10,900,227,,
+edamame,168411,"Edamame (frozen, shelled)",protein,Frozen,bag,bags,340,50,180,1000,100,,
+whey-protein,173177,Whey protein isolate,protein,Pantry,scoop,scoops,30,30,365,420,30,about 1 scoop a day,
+greek-yogurt,170894,"Greek yogurt (nonfat, plain)",dairy,Dairy & Eggs,cup,cups,245,50,14,2000,150,,
+greek-yogurt-lowfat,170903,"Greek yogurt (2%, plain)",dairy,Dairy & Eggs,cup,cups,245,50,14,2000,150,,
+yogurt-plain,171284,Plain yogurt (whole milk),dairy,Dairy & Eggs,cup,cups,245,50,14,2000,150,,
+yogurt-lowfat,170886,Plain yogurt (low fat),dairy,Dairy & Eggs,cup,cups,245,50,14,2000,150,,
+milk,171267,Milk (2%),dairy,Dairy & Eggs,cup,cups,244,250,10,3500,250,,
+milk-whole,171265,Milk (whole),dairy,Dairy & Eggs,cup,cups,244,250,10,3500,250,,
+milk-skim,171269,Milk (skim),dairy,Dairy & Eggs,cup,cups,245,250,10,3500,250,,
+soy-milk,172456,Soy milk (fortified),dairy,Dairy & Eggs,cup,cups,243,250,10,3500,250,,
+kefir,170904,"Kefir (low fat, plain)",dairy,Dairy & Eggs,cup,cups,243,250,14,2000,250,,
+cottage-cheese,172182,Cottage cheese (2%),dairy,Dairy & Eggs,cup,cups,226,50,10,1600,100,,
+cheddar,173414,Cheddar cheese,dairy,Dairy & Eggs,slice,slices,28,25,28,300,50,,
+mozzarella,170847,Mozzarella (part skim),dairy,Dairy & Eggs,slice,slices,28,25,21,300,50,,
+parmesan,171247,Parmesan (grated),dairy,Dairy & Eggs,tbsp,tbsp,5,10,60,100,20,,
+feta,173420,Feta cheese,dairy,Dairy & Eggs,block,blocks,170,25,21,250,50,,
+swiss,171251,Swiss cheese,dairy,Dairy & Eggs,slice,slices,28,25,28,300,50,,
+ricotta,171248,Ricotta (part skim),dairy,Dairy & Eggs,cup,cups,246,50,10,500,100,,
+butter,173430,Butter (unsalted),fat,Dairy & Eggs,tbsp,tbsp,14,10,60,140,14,,
+black-beans,175238,"Black beans (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125,,
+chickpeas,173757,"Chickpeas (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125,,
+lentils,172421,Lentils (cooked),protein,Pantry,cup cooked,cups cooked,198,50,365,1500,100,,
+kidney-beans,173740,"Kidney beans (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125,,
+pinto-beans,175200,"Pinto beans (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125,,
+navy-beans,173746,"Navy beans (canned, drained)",protein,Pantry,"can, drained","cans, drained",250,unit,365,1500,125,,
+split-peas,172429,Split peas (cooked),protein,Pantry,cup cooked,cups cooked,196,50,365,1200,100,,
+soybeans,174271,Soybeans (cooked),protein,Pantry,cup cooked,cups cooked,172,50,365,1000,100,,
+hummus,174289,Hummus,fat,Dairy & Eggs,tub,tubs,283,50,7,600,50,,
+peanut-butter,172470,Peanut butter (no salt),fat,Pantry,tbsp,tbsp,16,10,180,300,30,,
+brown-rice,169703,Brown rice (dry),carb,Pantry,cup dry,cups dry,185,50,180,1500,100,,
+white-rice,168877,White rice (dry),carb,Pantry,cup dry,cups dry,185,50,180,1500,100,,
+wild-rice,169726,Wild rice (dry),carb,Pantry,cup dry,cups dry,160,50,180,1500,100,,
+oats,169705,Rolled oats (dry),carb,Pantry,cup dry,cups dry,81,50,180,1500,100,,
+quinoa,168874,Quinoa (dry),carb,Pantry,cup dry,cups dry,170,50,180,1500,100,,
+whole-wheat-pasta,169738,Whole-wheat pasta (dry),carb,Pantry,box,boxes,454,50,180,1500,100,,
+pasta,169736,Pasta (dry),carb,Pantry,box,boxes,454,50,180,1500,100,,
+whole-wheat-bread,172688,Whole-wheat bread,carb,Pantry,slice,slices,32,unit,7,900,64,,
+corn-tortillas,175036,Corn tortillas,carb,Pantry,tortilla,tortillas,26,unit,14,600,52,,
+barley,170284,Pearl barley (dry),carb,Pantry,cup dry,cups dry,200,50,180,1500,100,,
+couscous,169699,Couscous (dry),carb,Pantry,cup dry,cups dry,173,50,180,1500,100,,
+bulgur,170688,Bulgur (dry),carb,Pantry,cup dry,cups dry,140,50,180,1500,100,,
+millet,169702,Millet (dry),carb,Pantry,cup dry,cups dry,200,50,180,1500,100,,
+buckwheat,170685,Buckwheat groats (dry),carb,Pantry,cup dry,cups dry,164,50,180,1500,100,,
+popcorn,167959,Popcorn (air-popped),carb,Pantry,cup,cups,8,10,180,200,20,,
+potato,170026,Potatoes,carb,Produce,medium,medium,213,unit,30,2000,150,,
+sweet-potato,168482,Sweet potatoes,carb,Produce,small,small,130,unit,21,2000,130,,
+spinach,168462,Spinach,vegetable,Produce,large bag,large bags,250,unit,5,1000,100,,
+kale,168421,Kale,vegetable,Produce,bunch,bunches,200,unit,7,800,100,,
+broccoli,170379,Broccoli,vegetable,Produce,head,heads,600,unit,7,1500,150,,
+cauliflower,169986,Cauliflower,vegetable,Produce,head,heads,575,unit,7,1500,150,,
+carrots,170393,Carrots,vegetable,Produce,carrot,carrots,61,unit,21,1000,61,,
+red-pepper,170108,Red bell pepper,vegetable,Produce,pepper,peppers,120,unit,10,1000,60,,
+green-pepper,170427,Green bell pepper,vegetable,Produce,pepper,peppers,120,unit,10,1000,60,,
+yellow-pepper,169383,Yellow bell pepper,vegetable,Produce,pepper,peppers,120,unit,10,1000,60,,
+tomato,170457,Tomatoes,vegetable,Produce,tomato,tomatoes,123,unit,7,1200,100,,
+cucumber,168409,Cucumber,vegetable,Produce,cucumber,cucumbers,300,unit,7,1200,150,,
+zucchini,169291,Zucchini,vegetable,Produce,zucchini,zucchini,200,unit,7,1200,150,,
+onion,170000,Onions,vegetable,Produce,onion,onions,110,unit,30,800,55,,
+garlic,169230,Garlic,vegetable,Produce,clove,cloves,3,unit,60,70,6,,
+mushrooms,169251,White mushrooms,vegetable,Produce,pack,packs,227,unit,7,1000,100,,
+shiitake,169242,Shiitake mushrooms,vegetable,Produce,pack,packs,100,unit,7,500,50,,
+portobello,169255,Portobello mushrooms,vegetable,Produce,cap,caps,85,unit,7,700,85,,
+asparagus,168389,Asparagus,vegetable,Produce,bunch,bunches,450,unit,4,1000,150,,
+green-beans,169961,Green beans,vegetable,Produce,bag,bags,340,50,7,1000,100,,
+brussels-sprouts,170383,Brussels sprouts,vegetable,Produce,bag,bags,340,50,7,1000,100,,
+cabbage,169975,Cabbage,vegetable,Produce,head,heads,900,unit,30,1500,150,,
+red-cabbage,169977,Red cabbage,vegetable,Produce,head,heads,900,unit,30,1500,150,,
+savoy-cabbage,170388,Savoy cabbage,vegetable,Produce,head,heads,700,unit,21,1500,150,,
+romaine,169247,Romaine lettuce,vegetable,Produce,head,heads,600,unit,7,1200,100,,
+green-leaf-lettuce,169249,Green leaf lettuce,vegetable,Produce,head,heads,360,unit,5,1000,100,,
+arugula,169387,Arugula,vegetable,Produce,container,containers,142,unit,5,600,50,,
+watercress,170068,Watercress,vegetable,Produce,bunch,bunches,100,unit,4,400,50,,
+celery,169988,Celery,vegetable,Produce,stalk,stalks,40,unit,21,800,40,,
+beets,169145,Beets,vegetable,Produce,beet,beets,82,unit,21,800,82,,
+butternut-squash,169295,Butternut squash,vegetable,Produce,squash,squash,1000,50,60,1500,200,,
+acorn-squash,168472,Acorn squash,vegetable,Produce,squash,squash,430,unit,60,1500,200,,
+corn,169998,Corn on the cob,vegetable,Produce,ear,ears,90,unit,3,900,90,,
+eggplant,169228,Eggplant,vegetable,Produce,eggplant,eggplants,450,unit,7,1000,200,,
+bok-choy,170390,Bok choy,vegetable,Produce,head,heads,450,unit,5,1000,100,,
+swiss-chard,169991,Swiss chard,vegetable,Produce,bunch,bunches,300,unit,5,900,100,,
+collards,170406,Collard greens,vegetable,Produce,bunch,bunches,400,unit,7,900,100,,
+green-onions,170005,Green onions,vegetable,Produce,bunch,bunches,100,unit,7,300,25,,
+radishes,169276,Radishes,vegetable,Produce,bunch,bunches,200,unit,14,500,50,,
+okra,169260,Okra,vegetable,Produce,bag,bags,340,50,4,800,100,,
+turnips,170465,Turnips,vegetable,Produce,turnip,turnips,120,unit,21,800,120,,
+parsnips,170417,Parsnips,vegetable,Produce,parsnip,parsnips,130,unit,21,800,130,,
+fennel,169385,Fennel,vegetable,Produce,bulb,bulbs,230,unit,7,700,115,,
+kohlrabi,168424,Kohlrabi,vegetable,Produce,bulb,bulbs,200,unit,14,700,100,,
+snap-peas,170010,Snap peas,vegetable,Produce,bag,bags,227,unit,5,800,100,,
+pumpkin-canned,168450,Canned pumpkin (no salt),vegetable,Pantry,can,cans,425,unit,365,900,200,,
+canned-tomatoes,170051,Canned tomatoes,vegetable,Pantry,can,cans,411,unit,365,1650,200,,
+tomato-paste,170459,Tomato paste (no salt),vegetable,Pantry,can,cans,170,unit,365,340,50,,
+frozen-spinach,169287,Frozen spinach,vegetable,Frozen,bag,bags,340,unit,180,1400,150,,
+frozen-broccoli,169968,Frozen broccoli,vegetable,Frozen,bag,bags,340,unit,180,1400,150,,
+frozen-mixed-veg,170471,Frozen mixed vegetables,vegetable,Frozen,bag,bags,454,unit,180,1400,150,,
+frozen-peas,170016,Frozen peas,vegetable,Frozen,bag,bags,454,unit,180,1400,150,,
+frozen-corn,168398,Frozen corn,vegetable,Frozen,bag,bags,454,unit,180,1400,150,,
+parsley,170416,Parsley,vegetable,Produce,bunch,bunches,60,unit,7,180,30,,
+cilantro,169997,Cilantro,vegetable,Produce,bunch,bunches,50,unit,7,150,25,,
+ginger,169231,Ginger,vegetable,Produce,knob,knobs,30,unit,21,90,10,,
+jalapeno,168576,Jalapeños,vegetable,Produce,pepper,peppers,14,unit,10,140,14,,
+banana,173944,Bananas,fruit,Produce,,,118,unit,5,1400,100,,
+apple,171688,Apples,fruit,Produce,,,182,unit,30,1400,100,,
+orange,169097,Oranges,fruit,Produce,,,131,unit,21,1400,100,,
+kiwi,168153,Kiwis,fruit,Produce,,,75,unit,14,900,75,,
+avocado,171705,Avocados,fruit,Produce,,,150,unit,5,1050,75,,
+blackberries,173946,Blackberries,fruit,Produce,small container,small containers,170,unit,4,1400,100,,
+blueberries,171711,Blueberries,fruit,Produce,pint,pints,340,unit,7,1400,100,,
+strawberries,167762,Strawberries,fruit,Produce,container,containers,454,unit,4,1400,100,,
+raspberries,167755,Raspberries,fruit,Produce,small container,small containers,170,unit,3,1400,100,,
+grapes,174683,Grapes,fruit,Produce,bag,bags,900,50,7,1400,150,,
+pear,169118,Pears,fruit,Produce,,,178,unit,7,1400,100,,
+peach,169928,Peaches,fruit,Produce,,,150,unit,4,1400,100,,
+nectarine,169914,Nectarines,fruit,Produce,,,142,unit,4,1400,100,,
+plum,169949,Plums,fruit,Produce,,,66,unit,5,900,66,,
+mango,169910,Mangoes,fruit,Produce,,,336,unit,5,1400,100,,
+pineapple,169124,Pineapple,fruit,Produce,pineapple,pineapples,905,50,5,1400,150,,
+watermelon,167765,Watermelon,fruit,Produce,mini watermelon,mini watermelons,1800,100,7,2000,200,,
+cantaloupe,169092,Cantaloupe,fruit,Produce,melon,melons,550,unit,7,1400,275,,
+honeydew,169911,Honeydew,fruit,Produce,melon,melons,1000,unit,7,1400,250,,
+cherries,171719,Cherries,fruit,Produce,bag,bags,450,50,5,900,100,,
+grapefruit,174673,Grapefruit,fruit,Produce,,,246,unit,21,1400,100,,
+clementine,169105,Clementines,fruit,Produce,,,74,unit,14,1000,74,,
+lemon,167746,Lemons,fruit,Produce,,,58,unit,21,350,29,,
+lime,168155,Limes,fruit,Produce,,,44,unit,21,270,22,,
+papaya,169926,Papaya,fruit,Produce,,,450,unit,5,1400,100,,
+pomegranate,169134,Pomegranates,fruit,Produce,,,280,unit,30,1400,100,,
+apricot,171697,Apricots,fruit,Produce,,,35,unit,5,700,70,,
+guava,173044,Guavas,fruit,Produce,,,55,unit,5,700,55,,
+persimmon,169941,Persimmons,fruit,Produce,,,168,unit,7,1400,100,,
+dates,168191,Medjool dates,fruit,Pantry,date,dates,24,unit,180,350,48,,
+raisins,168165,Raisins,fruit,Pantry,small box,small boxes,43,unit,180,300,43,,
+dried-apricots,173941,Dried apricots,fruit,Pantry,handful,handfuls,40,10,180,300,40,,
+prunes,168162,Prunes,fruit,Pantry,prune,prunes,10,10,180,300,40,,
+dried-figs,174665,Dried figs,fruit,Pantry,fig,figs,8,10,180,300,40,,
+frozen-blueberries,173950,Frozen blueberries,fruit,Frozen,bag,bags,454,unit,180,1400,150,,
+frozen-strawberries,168173,Frozen strawberries,fruit,Frozen,bag,bags,454,unit,180,1400,150,,
+almonds,170567,Almonds,fat,Pantry,handful,handfuls,30,10,180,350,30,"30 g a day, a small handful",
+walnuts,170187,Walnuts,fat,Pantry,handful,handfuls,30,10,180,350,30,"30 g a day, a small handful",
+cashews,170162,Cashews,fat,Pantry,handful,handfuls,30,10,180,350,30,,
+pistachios,170184,Pistachios,fat,Pantry,handful,handfuls,30,10,180,350,30,,
+peanuts,172430,Peanuts,fat,Pantry,handful,handfuls,30,10,180,350,30,,
+pecans,170182,Pecans,fat,Pantry,handful,handfuls,30,10,180,350,30,,
+brazil-nuts,170569,Brazil nuts,fat,Pantry,nut,nuts,5,5,180,35,5,1 nut a day is plenty (very high in selenium),
+hazelnuts,170581,Hazelnuts,fat,Pantry,handful,handfuls,30,10,180,350,30,,
+macadamia,170178,Macadamia nuts,fat,Pantry,handful,handfuls,30,10,180,350,30,,
+chia-seeds,170554,Chia seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20,,
+flaxseed,169414,Ground flaxseed,fat,Pantry,tbsp,tbsp,10,10,180,210,20,,
+pumpkin-seeds,170556,Pumpkin seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20,,
+sunflower-seeds,170562,Sunflower seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20,,
+hemp-seeds,170148,Hemp seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20,,
+sesame-seeds,170150,Sesame seeds,fat,Pantry,tbsp,tbsp,10,10,180,210,20,,
+tahini,170189,Tahini,fat,Pantry,tbsp,tbsp,15,10,180,210,15,,
+almond-butter,168588,Almond butter (no salt),fat,Pantry,tbsp,tbsp,16,10,180,300,30,,
+coconut,170169,Coconut (fresh),fat,Produce,cup shredded,cups shredded,80,10,7,200,40,,
+olives,169094,Olives (canned),fat,Pantry,can,cans,170,25,365,350,50,,
+olive-oil,171413,Olive oil,fat,Pantry,tbsp,tbsp,14,10,365,210,14,1–2 tbsp a day for cooking,
+avocado-oil,173573,Avocado oil,fat,Pantry,tbsp,tbsp,14,10,365,210,14,,
+canola-oil,172336,Canola oil,fat,Pantry,tbsp,tbsp,14,10,365,210,14,,
+dark-chocolate,170273,Dark chocolate (70–85%),other,Pantry,square,squares,10,10,180,140,20,,y
+soy-sauce,174277,Soy sauce,other,Pantry,tbsp,tbsp,16,10,365,100,10,,
+honey,169640,Honey,other,Pantry,tbsp,tbsp,21,10,365,140,10,,y
+maple-syrup,169661,Maple syrup,other,Pantry,tbsp,tbsp,20,10,365,140,10,,y
+salsa,174524,Salsa,vegetable,Pantry,jar,jars,454,50,14,450,50,,
+mustard,172234,Mustard,other,Pantry,tsp,tsp,5,5,365,70,5,,
+cinnamon,171320,Cinnamon (ground),other,Pantry,tsp,tsp,3,5,365,30,5,,

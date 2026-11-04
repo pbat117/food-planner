@@ -16,6 +16,15 @@ function validate(p: Profile): void {
   check(Number.isFinite(p.age) && p.age >= 19 && p.age <= 100, 'Age must be between 19 and 100.');
   check(Number.isFinite(p.heightCm) && p.heightCm >= 120 && p.heightCm <= 230, 'Height must be between 120 and 230 cm.');
   check(Number.isFinite(p.weightKg) && p.weightKg >= 30 && p.weightKg <= 300, 'Weight must be between 30 and 300 kg.');
+  check(p.sex === 'male' || p.sex === 'female', 'Sex must be male or female (used for the reference values).');
+  check(Object.hasOwn(ACTIVITY_FACTOR, p.activity), 'Choose an activity level.');
+  check(Object.hasOwn(GOAL_ADJUST, p.goal), 'Choose a goal: maintain, lose or gain.');
+  if (p.calorieOverride !== undefined) {
+    check(Number.isFinite(p.calorieOverride) && p.calorieOverride > 0, 'Daily calories must be a positive number.');
+  }
+  if (p.proteinGoal !== undefined) {
+    check(Number.isFinite(p.proteinGoal.value) && p.proteinGoal.value > 0, 'Protein goal must be a positive number.');
+  }
 }
 
 export function dailyCaloriesFor(p: Profile): number {

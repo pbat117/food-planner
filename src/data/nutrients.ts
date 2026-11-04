@@ -71,7 +71,8 @@ export function driFor(id: Micro, sex: Sex, age: number): DriValue {
     case 'selenium': return total(55, 400);
     case 'copper': return total(900, 10000);
     case 'manganese': return total(m ? 2.3 : 1.8, 11);
-    case 'vitA': return total(m ? 900 : 700, 3000);
+    // The UL covers preformed vitamin A (retinol), not carotenoids from plants, so food is not capped.
+    case 'vitA': return supp(m ? 900 : 700, 3000);
     case 'vitC': return total(m ? 90 : 75, 2000);
     case 'vitD': return total(age >= 71 ? 20 : 15, 100);
     case 'vitE': return supp(15, 1000);

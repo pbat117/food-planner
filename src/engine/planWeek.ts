@@ -21,7 +21,7 @@ export function reanalyze(items: RoundedAmount[], input: PlanInput): NutrientRep
 export async function planWeek(input: PlanInput): Promise<WeekPlan> {
   const result = await optimize(input);
   const items = sortByAisle(
-    Object.entries(result.amounts).map(([id, g]) => roundAmount(id, g, id in input.locks)),
+    Object.entries(result.amounts).filter(([, g]) => g > 0).map(([id, g]) => roundAmount(id, g, id in input.locks)),
   );
   return { items, report: reanalyze(items, input), relaxed: result.relaxed, input };
 }

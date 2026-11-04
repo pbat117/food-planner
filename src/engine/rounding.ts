@@ -34,7 +34,7 @@ export function roundAmount(foodId: string, grams: number, locked = false): Roun
     const step = f.roundTo;
     finalGrams = locked ? grams : Math.max(step, Math.round(grams / step) * step);
     units = Math.round((finalGrams / unit.grams) * 2) / 2;
-    label = `≈ ${unitLabel(units, unit.name, unit.plural)}`;
+    label = units < 0.5 ? `${Math.round(finalGrams)} g` : `≈ ${unitLabel(units, unit.name, unit.plural)}`;
   }
 
   return {

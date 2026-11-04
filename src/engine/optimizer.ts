@@ -16,6 +16,8 @@ const TIE_BREAK = 1e-4;
 /** Protein above this multiple of the goal is mildly penalized (lots of extra meat is costly, not useful). */
 const PROTEIN_SOFT_CAP = 2;
 const EPS = 1e-6;
+/** Aim slightly under every cap so rounding to store units doesn't tip a nutrient into 'high'. */
+const CAP_MARGIN = 0.99;
 
 interface Model {
   lp: string;
@@ -76,7 +78,7 @@ export function buildLp(input: PlanInput): Model {
     if (id === 'energy') {
       const w = HARD / t.target!;
       rows.push(`elo: ${lhs}\n + 1 elo >= ${num(t.lowBelow! - F)}`);
-      rows.push(`ehi: ${lhs}\n - 1 ehi <= ${num(t.max! - F)}`);
+      rows.push(`ehi: ${lhs}\n - 1 ehi <= ${num(CAP_MARGIN * t.max! - F)}`);
       objective.push(`+ ${num(w)} elo`, `+ ${num(w)} ehi`);
       relaxVars.set('elo', 'energy').set('ehi', 'energy');
       return;
@@ -91,7 +93,7 @@ export function buildLp(input: PlanInput): Model {
     }
 
     if (t.max !== undefined) {
-      rows.push(`m${k}: ${lhs}\n - 1 s${k} <= ${num(t.max - F)}`);
+      rows.push(`m${k}: ${lhs}\n - 1 s${k} <= ${num(CAP_MARGIN * t.max - F)}`);
       objective.push(`+ ${num(HARD / t.max)} s${k}`);
       relaxVars.set(`s${k}`, id);
     }
@@ -119,10 +121,15 @@ export function buildLp(input: PlanInput): Model {
 async function solveOnce(input: PlanInput): Promise<OptimizeResult | null> {
   const highs = await loadHighs();
   const { lp, candidates, relaxVars } = buildLp(input);
-  const sol = highs.solve(lp, { time_limit: 5, mip_rel_gap: 0.01, output_flag: false });
+  let sol: ReturnType<Highs['solve']>;
+  try {
+    sol = highs.solve(lp, { time_limit: 5, mip_rel_gap: 0.01, output_flag: false });
+  } catch {
+    return null; // malformed model (e.g. NaN input) → caller falls back
+  }
   const ok = sol.Status === 'Optimal' || sol.Status === 'Time limit reached';
   if (!ok) return null;
-  const col = (name: string): number => sol.Columns[name]?.Primal ?? 0;
+  const col = (name: string): number => (sol.Columns[name] as { Primal?: number } | undefined)?.Primal ?? 0;
   if (sol.Status === 'Time limit reached' && candidates.length && !(`x0` in sol.Columns)) return null;
 
   const amounts: Record<string, number> = {};
