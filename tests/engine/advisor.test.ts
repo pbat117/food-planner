@@ -46,3 +46,15 @@ describe('advisor', () => {
     expect(await suggestRecipeCombos(p)).toEqual([]);
   });
 });
+
+describe('advisor ranking', () => {
+  it('for a small gap, prefers the smallest addition among liked foods', async () => {
+    const p = await planWeek(base);
+    const n = 'calcium';
+    const line = p.report.lines[n];
+    const fake = { ...p, report: { ...p.report, lines: { ...p.report.lines, [n]: { ...line, total: line.target! * 0.89 } } } };
+    const s = suggestForLow(fake, n);
+    const liked = s.filter((x) => x.liked);
+    expect(liked.map((x) => x.addGrams)).toEqual([...liked.map((x) => x.addGrams)].sort((a, b) => a - b));
+  });
+});

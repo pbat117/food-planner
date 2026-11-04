@@ -27,13 +27,14 @@ export interface ComboSuggestion {
 
 const CAPPED: NutrientId[] = ['sodium', 'satFat', 'addedSugar'];
 
-/** Up to `limit` foods that would close a nutrient gap: liked first, then ones that fully fix it, then fewest calories. */
+/** Up to `limit` foods that would close a nutrient gap: liked first, then ones that fully fix it, then the smallest addition. */
 export function suggestForLow(plan: WeekPlan, nutrient: NutrientId, limit = 3): FoodSuggestion[] {
   const { lines } = plan.report;
   const line = lines[nutrient];
-  if (!line.target || line.total >= line.target) return [];
-  const gap = line.target - line.total;
   const lowBelow = plan.input.targets.nutrients[nutrient].lowBelow ?? line.target;
+  if (!line.target || lowBelow === undefined || line.total >= lowBelow) return [];
+  // Top up to the "ok" line (usually 90%), not a perfect 100%.
+  const gap = lowBelow - line.total;
   const disliked = new Set(plan.input.dislikedFoodIds);
   const liked = new Set(plan.input.likedFoodIds);
   const current = new Map(plan.items.map((i) => [i.foodId, i.grams]));
@@ -62,7 +63,7 @@ export function suggestForLow(plan: WeekPlan, nutrient: NutrientId, limit = 3): 
     });
   }
 
-  out.sort((a, b) => Number(b.liked) - Number(a.liked) || Number(b.fixes) - Number(a.fixes) || a.addedKcal - b.addedKcal);
+  out.sort((a, b) => Number(b.liked) - Number(a.liked) || Number(b.fixes) - Number(a.fixes) || a.addGrams - b.addGrams || a.addedKcal - b.addedKcal);
   return out.slice(0, limit).map(({ fixes: _fixes, ...s }) => s);
 }
 

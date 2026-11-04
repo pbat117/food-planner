@@ -12,7 +12,7 @@ import { computeWeeklyTargets } from '@/engine/targets';
 import type { NutrientId, PlanInput, Profile, SupplementUse } from '@/engine/types';
 
 interface SampleInput {
-  profile: Profile; liked: string[]; disliked: string[]; maxDistinctFoods: number;
+  profile: Profile; include?: string[]; liked: string[]; disliked: string[]; maxDistinctFoods: number;
   fruit?: PlanInput['fruit']; supplements?: SupplementUse[]; supplementedNutrients?: NutrientId[];
 }
 
@@ -27,7 +27,7 @@ async function main(): Promise<void> {
   const plan = await planWeek({
     targets, likedFoodIds: input.liked, dislikedFoodIds: input.disliked, recipes: [], locks: {},
     supplements: input.supplements ?? [], supplementedNutrients: input.supplementedNutrients ?? [],
-    maxDistinctFoods: input.maxDistinctFoods, fruit: input.fruit,
+    maxDistinctFoods: input.maxDistinctFoods, fruit: input.fruit, includeFoodIds: input.include,
   });
 
   console.log(`\nWEEKLY LIST (${plan.items.length} foods, solved in ${Date.now() - t0} ms)\n`);

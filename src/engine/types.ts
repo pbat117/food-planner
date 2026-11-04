@@ -111,6 +111,8 @@ export interface PlanInput {
   supplementedNutrients: NutrientId[];
   /** Default 15. */
   maxDistinctFoods: number;
+  /** Foods you chose: always in the plan (at least their minimum amount); the optimizer sizes them. */
+  includeFoodIds?: string[];
   /** Always include fruit: at least gramsPerDay (×7 for the week), from at most maxKinds different fruits. */
   fruit?: { gramsPerDay: number; maxKinds: number };
 }

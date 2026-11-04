@@ -35,7 +35,10 @@ export function buildLp(input: PlanInput): Model {
   const { targets } = input;
   const disliked = new Set(input.dislikedFoodIds);
   const lockedIds = new Set(Object.keys(input.locks));
-  const pool = input.likedFoodIds.length ? input.likedFoodIds.map(getFood) : FOODS;
+  const included = new Set(input.includeFoodIds ?? []);
+  const pool = input.likedFoodIds.length
+    ? [...new Set([...input.likedFoodIds, ...included])].map(getFood)
+    : FOODS;
   const candidates = pool.filter((f) => !disliked.has(f.id) && !lockedIds.has(f.id));
   const candidateIds = new Set(candidates.map((f) => f.id));
 
@@ -60,12 +63,15 @@ export function buildLp(input: PlanInput): Model {
     rows.push(`hi${i}: x${i} - ${num(f.maxWeeklyGrams)} y${i} <= 0`);
     bounds.push(`0 <= x${i} <= ${num(f.maxWeeklyGrams)}`);
     binaries.push(`y${i}`);
+    if (included.has(f.id)) rows.push(`inc${i}: y${i} >= 1`);
   });
 
   const recipeFoodsOutside = new Set(
     input.recipes.flatMap((r) => r.ingredients.map((g) => g.foodId)).filter((id) => !candidateIds.has(id)),
   );
-  const maxNew = Math.max(0, input.maxDistinctFoods - lockedIds.size - recipeFoodsOutside.size);
+  // Your chosen foods always fit, even if that means going over the distinct-food limit.
+  const includedCount = candidates.filter((f) => included.has(f.id)).length;
+  const maxNew = Math.max(includedCount, input.maxDistinctFoods - lockedIds.size - recipeFoodsOutside.size);
   if (candidates.length) rows.push(`distinct: ${candidates.map((_, i) => `+ y${i}`).join(' ')} <= ${maxNew}`);
 
   if (input.fruit) {
@@ -102,9 +108,11 @@ export function buildLp(input: PlanInput): Model {
       return;
     }
 
-    if (t.target !== undefined && !supplemented.has(id) && t.target - F > EPS) {
+    // Aim for the 'ok' threshold (90% for most nutrients, 100% for protein), not a perfect 100%.
+    const goal = t.lowBelow ?? t.target;
+    if (t.target !== undefined && goal !== undefined && !supplemented.has(id) && goal - F > EPS) {
       const w = (id === 'protein' ? HARD : 1) / t.target;
-      rows.push(`t${k}: ${lhs}\n + 1 da${k} + 1 db${k} >= ${num(t.target - F)}`);
+      rows.push(`t${k}: ${lhs}\n + 1 da${k} + 1 db${k} >= ${num(goal - F)}`);
       bounds.push(`0 <= da${k} <= ${num(0.1 * t.target)}`);
       objective.push(`+ ${num(w)} da${k}`, `+ ${num(10 * w)} db${k}`);
       if (id === 'protein') relaxVars.set(`da${k}`, 'protein').set(`db${k}`, 'protein');
