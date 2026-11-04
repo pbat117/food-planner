@@ -44,6 +44,10 @@ export interface WeeklyTargets {
 export type FoodCategory = 'protein' | 'carb' | 'vegetable' | 'fruit' | 'fat' | 'dairy' | 'other';
 export type Aisle = 'Produce' | 'Meat & Fish' | 'Dairy & Eggs' | 'Pantry' | 'Frozen';
 
+export type Section = 'Meat' | 'Fruit' | 'Vegetables and beans' | 'Grains' | 'Dairy' | 'Nuts and nut butter' | 'Other';
+/** What the gram amount measures. */
+export type GramsBasis = 'raw' | 'cooked' | 'dry' | 'drained' | 'peeled' | 'flesh' | 'as sold';
+
 export interface Food {
   id: string;
   fdcId: number;
@@ -59,6 +63,13 @@ export interface Food {
   maxWeeklyGrams: number;
   minGrams: number;
   dailyHint?: string;
+  /** Weekly-list section. */
+  section: Section;
+  basis: GramsBasis;
+  /** Multiply grams by this for the other form: raw meat → cooked, dry grain → cooked, cooked legumes → dry. */
+  yield?: number;
+  /** What you buy, when it differs from the unit (peanut butter: unit tbsp, package 500 g jar). */
+  package?: { name: string; grams: number };
   /** Nutrients USDA had no value for (treated as 0). */
   missing: NutrientId[];
 }

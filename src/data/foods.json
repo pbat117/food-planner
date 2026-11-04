@@ -49,6 +49,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -101,6 +104,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -153,6 +159,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -205,6 +214,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": [
    "vitD"
   ]
@@ -259,6 +271,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 200,
   "minGrams": 100,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -311,6 +326,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": [
    "manganese",
    "pantothenicAcid"
@@ -366,6 +384,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -418,6 +439,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -470,6 +494,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": [
    "pantothenicAcid"
   ]
@@ -524,6 +551,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -576,6 +606,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": [
    "vitD"
   ]
@@ -630,6 +663,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -682,6 +718,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -734,6 +773,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -786,6 +828,9 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 1400,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.74,
   "missing": []
  },
  {
@@ -838,6 +883,8 @@
   "shelfLifeDays": 28,
   "maxWeeklyGrams": 1200,
   "minGrams": 100,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -890,6 +937,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 1500,
   "minGrams": 100,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -942,6 +991,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -994,6 +1046,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": [
    "vitD",
    "vitE",
@@ -1051,6 +1106,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 700,
   "minGrams": 100,
+  "section": "Meat",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -1103,6 +1160,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 600,
   "minGrams": 142,
+  "section": "Meat",
+  "basis": "drained",
   "missing": []
  },
  {
@@ -1155,6 +1214,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 460,
   "minGrams": 92,
+  "section": "Meat",
+  "basis": "drained",
   "missing": []
  },
  {
@@ -1207,6 +1268,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1259,6 +1323,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1311,6 +1378,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1363,6 +1433,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1415,6 +1488,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1467,6 +1543,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1519,6 +1598,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 56,
   "minGrams": 28,
+  "section": "Meat",
+  "basis": "drained",
   "missing": []
  },
  {
@@ -1571,6 +1652,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1623,6 +1707,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 1000,
   "minGrams": 200,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1675,6 +1762,9 @@
   "shelfLifeDays": 2,
   "maxWeeklyGrams": 800,
   "minGrams": 150,
+  "section": "Meat",
+  "basis": "raw",
+  "yield": 0.8,
   "missing": []
  },
  {
@@ -1727,6 +1817,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 792,
   "minGrams": 200,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "vitA",
    "vitE",
@@ -1784,6 +1876,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 454,
   "minGrams": 227,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "fiber",
    "vitE",
@@ -1841,6 +1935,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 340,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -1894,6 +1990,12 @@
   "maxWeeklyGrams": 210,
   "minGrams": 30,
   "dailyHint": "about 1 scoop a day",
+  "section": "Other",
+  "basis": "as sold",
+  "package": {
+   "name": "tub",
+   "grams": 900
+  },
   "missing": []
  },
  {
@@ -1946,6 +2048,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -1998,6 +2102,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2050,6 +2156,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2102,6 +2210,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 1000,
   "minGrams": 150,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2154,6 +2264,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 2000,
   "minGrams": 250,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2206,6 +2318,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 2000,
   "minGrams": 250,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2258,6 +2372,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 2000,
   "minGrams": 250,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2310,6 +2426,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 2000,
   "minGrams": 250,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2362,6 +2480,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 1000,
   "minGrams": 250,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2414,6 +2534,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 500,
   "minGrams": 100,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2466,6 +2588,8 @@
   "shelfLifeDays": 28,
   "maxWeeklyGrams": 200,
   "minGrams": 50,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2518,6 +2642,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 200,
   "minGrams": 50,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2570,6 +2696,8 @@
   "shelfLifeDays": 60,
   "maxWeeklyGrams": 60,
   "minGrams": 20,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2622,6 +2750,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 170,
   "minGrams": 50,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2674,6 +2804,8 @@
   "shelfLifeDays": 28,
   "maxWeeklyGrams": 200,
   "minGrams": 50,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2726,6 +2858,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 250,
   "minGrams": 100,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2778,6 +2912,8 @@
   "shelfLifeDays": 60,
   "maxWeeklyGrams": 100,
   "minGrams": 14,
+  "section": "Dairy",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -2830,6 +2966,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 750,
   "minGrams": 125,
+  "section": "Vegetables and beans",
+  "basis": "drained",
   "missing": []
  },
  {
@@ -2882,6 +3020,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 750,
   "minGrams": 125,
+  "section": "Vegetables and beans",
+  "basis": "drained",
   "missing": []
  },
  {
@@ -2934,6 +3074,9 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 800,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "cooked",
+  "yield": 0.4,
   "missing": []
  },
  {
@@ -2986,6 +3129,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 750,
   "minGrams": 125,
+  "section": "Vegetables and beans",
+  "basis": "drained",
   "missing": []
  },
  {
@@ -3038,6 +3183,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 750,
   "minGrams": 125,
+  "section": "Vegetables and beans",
+  "basis": "drained",
   "missing": []
  },
  {
@@ -3090,6 +3237,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 750,
   "minGrams": 125,
+  "section": "Vegetables and beans",
+  "basis": "drained",
   "missing": []
  },
  {
@@ -3142,6 +3291,9 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 600,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "cooked",
+  "yield": 0.4,
   "missing": []
  },
  {
@@ -3194,6 +3346,9 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 500,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "cooked",
+  "yield": 0.4,
   "missing": []
  },
  {
@@ -3246,6 +3401,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 283,
   "minGrams": 50,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "choline"
   ]
@@ -3300,6 +3457,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 300,
   "minGrams": 30,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "jar",
+   "grams": 500
+  },
   "missing": []
  },
  {
@@ -3352,6 +3515,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 1000,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.8,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": []
  },
  {
@@ -3404,6 +3574,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 1000,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.8,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": []
  },
  {
@@ -3456,6 +3633,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 500,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.8,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": []
  },
  {
@@ -3508,6 +3692,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 700,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "package": {
+   "name": "bag",
+   "grams": 1000
+  },
   "missing": [
    "selenium",
    "vitE",
@@ -3565,6 +3755,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 500,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.7,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": [
    "vitC"
   ]
@@ -3619,6 +3816,9 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 454,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.3,
   "missing": [
    "vitA",
    "vitC",
@@ -3675,6 +3875,9 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 454,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.3,
   "missing": []
  },
  {
@@ -3727,6 +3930,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 640,
   "minGrams": 64,
+  "section": "Grains",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -3779,6 +3984,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 312,
   "minGrams": 52,
+  "section": "Grains",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -3831,6 +4038,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 3,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": []
  },
  {
@@ -3883,6 +4097,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.4,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": [
    "selenium",
    "vitE",
@@ -3940,6 +4161,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.7,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": []
  },
  {
@@ -3992,6 +4220,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 3.4,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": [
    "choline"
   ]
@@ -4046,6 +4281,13 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Grains",
+  "basis": "dry",
+  "yield": 2.5,
+  "package": {
+   "name": "bag",
+   "grams": 900
+  },
   "missing": [
    "vitE",
    "vitK"
@@ -4101,6 +4343,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 100,
   "minGrams": 20,
+  "section": "Grains",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4153,6 +4397,8 @@
   "shelfLifeDays": 30,
   "maxWeeklyGrams": 426,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4205,6 +4451,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 400,
   "minGrams": 130,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4257,6 +4505,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 500,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4309,6 +4559,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4361,6 +4613,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 600,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4413,6 +4667,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 575,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4465,6 +4721,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 488,
   "minGrams": 61,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4517,6 +4775,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 240,
   "minGrams": 60,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4569,6 +4829,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 400,
   "minGrams": 60,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4621,6 +4883,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 400,
   "minGrams": 60,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "vitE",
    "vitK",
@@ -4679,6 +4943,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 492,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4731,6 +4997,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 600,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4783,6 +5051,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 600,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4835,6 +5105,8 @@
   "shelfLifeDays": 30,
   "maxWeeklyGrams": 330,
   "minGrams": 55,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4887,6 +5159,8 @@
   "shelfLifeDays": 60,
   "maxWeeklyGrams": 42,
   "minGrams": 6,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4939,6 +5213,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 454,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -4991,6 +5267,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 400,
   "minGrams": 50,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "satFat",
    "vitA",
@@ -5053,6 +5331,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 400,
   "minGrams": 85,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "magnesium"
   ]
@@ -5107,6 +5387,8 @@
   "shelfLifeDays": 4,
   "maxWeeklyGrams": 450,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5159,6 +5441,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 340,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5211,6 +5495,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 340,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5263,6 +5549,8 @@
   "shelfLifeDays": 30,
   "maxWeeklyGrams": 450,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5315,6 +5603,8 @@
   "shelfLifeDays": 30,
   "maxWeeklyGrams": 400,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5367,6 +5657,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 400,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5419,6 +5711,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 600,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5471,6 +5765,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5523,6 +5819,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 400,
   "minGrams": 50,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5575,6 +5873,8 @@
   "shelfLifeDays": 4,
   "maxWeeklyGrams": 400,
   "minGrams": 50,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5627,6 +5927,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 400,
   "minGrams": 40,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5679,6 +5981,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 400,
   "minGrams": 82,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5731,6 +6035,8 @@
   "shelfLifeDays": 60,
   "maxWeeklyGrams": 1000,
   "minGrams": 200,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "choline"
   ]
@@ -5785,6 +6091,8 @@
   "shelfLifeDays": 60,
   "maxWeeklyGrams": 400,
   "minGrams": 200,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "vitE",
    "vitK",
@@ -5841,6 +6149,8 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 400,
   "minGrams": 90,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5893,6 +6203,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 400,
   "minGrams": 200,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5945,6 +6257,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -5997,6 +6311,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6049,6 +6365,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6101,6 +6419,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 300,
   "minGrams": 25,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6153,6 +6473,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 400,
   "minGrams": 50,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6205,6 +6527,8 @@
   "shelfLifeDays": 4,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6257,6 +6581,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 400,
   "minGrams": 120,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6309,6 +6635,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 400,
   "minGrams": 130,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "choline"
   ]
@@ -6363,6 +6691,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 400,
   "minGrams": 115,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6415,6 +6745,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6467,6 +6799,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 400,
   "minGrams": 100,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6519,6 +6853,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 400,
   "minGrams": 200,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6571,6 +6907,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 822,
   "minGrams": 200,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6623,6 +6961,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 340,
   "minGrams": 50,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6675,6 +7015,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 340,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6727,6 +7069,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 454,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6779,6 +7123,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 454,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": [
    "vitE",
    "vitK",
@@ -6835,6 +7181,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 454,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6887,6 +7235,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 454,
   "minGrams": 150,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6939,6 +7289,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 180,
   "minGrams": 30,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -6991,6 +7343,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 150,
   "minGrams": 25,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7043,6 +7397,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 90,
   "minGrams": 10,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7095,6 +7451,8 @@
   "shelfLifeDays": 10,
   "maxWeeklyGrams": 140,
   "minGrams": 14,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7147,6 +7505,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 826,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -7199,6 +7559,8 @@
   "shelfLifeDays": 30,
   "maxWeeklyGrams": 728,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7251,6 +7613,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 262,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -7303,6 +7667,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 300,
   "minGrams": 75,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -7355,6 +7721,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 450,
   "minGrams": 75,
+  "section": "Fruit",
+  "basis": "flesh",
   "missing": []
  },
  {
@@ -7407,6 +7775,8 @@
   "shelfLifeDays": 4,
   "maxWeeklyGrams": 340,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7459,6 +7829,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 340,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7511,6 +7883,8 @@
   "shelfLifeDays": 4,
   "maxWeeklyGrams": 454,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7563,6 +7937,8 @@
   "shelfLifeDays": 3,
   "maxWeeklyGrams": 340,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7615,6 +7991,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 500,
   "minGrams": 150,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7667,6 +8045,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 534,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7719,6 +8099,8 @@
   "shelfLifeDays": 4,
   "maxWeeklyGrams": 450,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7771,6 +8153,8 @@
   "shelfLifeDays": 4,
   "maxWeeklyGrams": 426,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7823,6 +8207,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 264,
   "minGrams": 66,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -7875,6 +8261,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 336,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -7927,6 +8315,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 450,
   "minGrams": 150,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -7979,6 +8369,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 900,
   "minGrams": 200,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -8031,6 +8423,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 550,
   "minGrams": 275,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -8083,6 +8477,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 500,
   "minGrams": 250,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -8135,6 +8531,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 450,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8187,6 +8585,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 246,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -8239,6 +8639,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 296,
   "minGrams": 74,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -8291,6 +8693,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 116,
   "minGrams": 29,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8343,6 +8747,8 @@
   "shelfLifeDays": 21,
   "maxWeeklyGrams": 88,
   "minGrams": 22,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8395,6 +8801,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 450,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -8447,6 +8855,8 @@
   "shelfLifeDays": 30,
   "maxWeeklyGrams": 280,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "peeled",
   "missing": []
  },
  {
@@ -8499,6 +8909,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 210,
   "minGrams": 70,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8551,6 +8963,8 @@
   "shelfLifeDays": 5,
   "maxWeeklyGrams": 220,
   "minGrams": 55,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8603,6 +9017,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 336,
   "minGrams": 100,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": [
    "pantothenicAcid"
   ]
@@ -8657,6 +9073,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 48,
   "minGrams": 24,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": [
    "satFat",
    "selenium",
@@ -8716,6 +9134,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 86,
   "minGrams": 43,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": [
    "pantothenicAcid"
   ]
@@ -8770,6 +9190,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 80,
   "minGrams": 40,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8822,6 +9244,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 20,
   "minGrams": 10,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8874,6 +9298,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 16,
   "minGrams": 8,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8926,6 +9352,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 454,
   "minGrams": 150,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -8978,6 +9406,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 454,
   "minGrams": 150,
+  "section": "Fruit",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -9031,6 +9461,12 @@
   "maxWeeklyGrams": 210,
   "minGrams": 30,
   "dailyHint": "30 g a day, a small handful",
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9084,6 +9520,12 @@
   "maxWeeklyGrams": 210,
   "minGrams": 30,
   "dailyHint": "30 g a day, a small handful",
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9136,6 +9578,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 210,
   "minGrams": 30,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": [
    "choline"
   ]
@@ -9190,6 +9638,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 210,
   "minGrams": 30,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": [
    "vitK",
    "choline"
@@ -9245,6 +9699,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 210,
   "minGrams": 30,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9297,6 +9757,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 210,
   "minGrams": 30,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9350,6 +9816,12 @@
   "maxWeeklyGrams": 35,
   "minGrams": 5,
   "dailyHint": "1 nut a day is plenty (very high in selenium)",
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9402,6 +9874,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 210,
   "minGrams": 30,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9454,6 +9932,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 210,
   "minGrams": 30,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": [
    "vitK",
    "choline"
@@ -9509,6 +9993,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 105,
   "minGrams": 20,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": [
    "vitA",
    "vitD",
@@ -9569,6 +10059,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 105,
   "minGrams": 20,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9621,6 +10117,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 105,
   "minGrams": 20,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9673,6 +10175,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 105,
   "minGrams": 20,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9725,6 +10233,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 105,
   "minGrams": 20,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": [
    "selenium",
    "vitD",
@@ -9784,6 +10298,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 105,
   "minGrams": 20,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "bag",
+   "grams": 300
+  },
   "missing": []
  },
  {
@@ -9836,6 +10356,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 210,
   "minGrams": 15,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "jar",
+   "grams": 500
+  },
   "missing": []
  },
  {
@@ -9888,6 +10414,12 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 300,
   "minGrams": 30,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
+  "package": {
+   "name": "jar",
+   "grams": 500
+  },
   "missing": []
  },
  {
@@ -9940,6 +10472,8 @@
   "shelfLifeDays": 7,
   "maxWeeklyGrams": 200,
   "minGrams": 40,
+  "section": "Nuts and nut butter",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -9992,6 +10526,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 350,
   "minGrams": 50,
+  "section": "Other",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -10045,6 +10581,12 @@
   "maxWeeklyGrams": 150,
   "minGrams": 14,
   "dailyHint": "1–2 tbsp a day for cooking",
+  "section": "Other",
+  "basis": "as sold",
+  "package": {
+   "name": "bottle",
+   "grams": 500
+  },
   "missing": []
  },
  {
@@ -10097,6 +10639,12 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 150,
   "minGrams": 14,
+  "section": "Other",
+  "basis": "as sold",
+  "package": {
+   "name": "bottle",
+   "grams": 500
+  },
   "missing": [
    "vitD",
    "vitE",
@@ -10154,6 +10702,12 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 150,
   "minGrams": 14,
+  "section": "Other",
+  "basis": "as sold",
+  "package": {
+   "name": "bottle",
+   "grams": 500
+  },
   "missing": []
  },
  {
@@ -10206,6 +10760,8 @@
   "shelfLifeDays": 180,
   "maxWeeklyGrams": 140,
   "minGrams": 20,
+  "section": "Other",
+  "basis": "as sold",
   "missing": [
    "vitC",
    "vitD",
@@ -10263,6 +10819,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 100,
   "minGrams": 10,
+  "section": "Other",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -10315,6 +10873,12 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 140,
   "minGrams": 10,
+  "section": "Other",
+  "basis": "as sold",
+  "package": {
+   "name": "jar",
+   "grams": 500
+  },
   "missing": []
  },
  {
@@ -10367,6 +10931,12 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 140,
   "minGrams": 10,
+  "section": "Other",
+  "basis": "as sold",
+  "package": {
+   "name": "bottle",
+   "grams": 500
+  },
   "missing": []
  },
  {
@@ -10419,6 +10989,8 @@
   "shelfLifeDays": 14,
   "maxWeeklyGrams": 400,
   "minGrams": 50,
+  "section": "Vegetables and beans",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -10471,6 +11043,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 70,
   "minGrams": 5,
+  "section": "Other",
+  "basis": "as sold",
   "missing": []
  },
  {
@@ -10523,6 +11097,8 @@
   "shelfLifeDays": 365,
   "maxWeeklyGrams": 30,
   "minGrams": 5,
+  "section": "Other",
+  "basis": "as sold",
   "missing": []
  }
 ]

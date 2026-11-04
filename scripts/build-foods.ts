@@ -8,7 +8,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import type { Aisle, Food, FoodCategory, NutrientId, NutrientVector } from '../src/engine/types';
+import type { Aisle, Food, GramsBasis, Section, FoodCategory, NutrientId, NutrientVector } from '../src/engine/types';
 
 /** FDC nutrient id → our id and unit conversion factor. Arrays are fallbacks, in order. */
 const MAP: { ours: NutrientId; fdc: number[]; factor: number; sum?: boolean; zeroOk?: boolean }[] = [
@@ -129,6 +129,10 @@ function main(): void {
       maxWeeklyGrams: Number(s.maxWeeklyGrams),
       minGrams: Number(s.minGrams),
       ...(s.dailyHint ? { dailyHint: s.dailyHint } : {}),
+      section: s.section as Section,
+      basis: s.basis as GramsBasis,
+      ...(s.yield ? { yield: Number(s.yield) } : {}),
+      ...(s.packageName ? { package: { name: s.packageName, grams: Number(s.packageGrams) } } : {}),
       missing,
     };
   });
