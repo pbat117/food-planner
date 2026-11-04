@@ -129,7 +129,8 @@ export function saveSettings(s: Settings, store: KeyValueStore | null = defaultS
 export function toPlanInput(s: Settings): PlanInput {
   return {
     targets: computeWeeklyTargets(s.profile),
-    likedFoodIds: [...s.likedFoodIds],
+    // Staples come from foods you like beyond "Your foods"; if there are none, from every food you don't dislike.
+    likedFoodIds: s.likedFoodIds.some((id) => !s.includeFoodIds.includes(id)) ? [...s.likedFoodIds] : [],
     dislikedFoodIds: [...s.dislikedFoodIds],
     recipes: [],
     locks: { ...s.regularItems },
@@ -158,6 +159,10 @@ export function setPref(s: Settings, foodId: string, pref: FoodPref): Settings {
   const disliked = without(s.dislikedFoodIds);
   if (pref === 'include') include.push(foodId);
   if (pref === 'include' || pref === 'liked') liked.push(foodId);
-  if (pref === 'disliked') disliked.push(foodId);
-  return { ...s, includeFoodIds: include, likedFoodIds: liked, dislikedFoodIds: disliked };
+  const regularItems = { ...s.regularItems };
+  if (pref === 'disliked') {
+    disliked.push(foodId);
+    delete regularItems[foodId];
+  }
+  return { ...s, includeFoodIds: include, likedFoodIds: liked, dislikedFoodIds: disliked, regularItems };
 }

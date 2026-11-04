@@ -1,5 +1,5 @@
 import highsLoader from 'highs';
-import { FOODS, getFood } from '@/data/foods';
+import { FOODS, getFood, NOT_AUTO_PICKED } from '@/data/foods';
 import { analyze } from './analyze';
 import type { Food, NutrientId, OptimizeResult, PlanInput } from './types';
 
@@ -47,7 +47,7 @@ export function buildLp(input: PlanInput): Model {
   const included = new Set(input.includeFoodIds ?? []);
   const pool = input.likedFoodIds.length
     ? [...new Set([...input.likedFoodIds, ...included])].map(getFood)
-    : FOODS;
+    : FOODS.filter((f) => !NOT_AUTO_PICKED.has(f.id) || included.has(f.id));
   const candidates = pool.filter((f) => !disliked.has(f.id) && !lockedIds.has(f.id));
   const candidateIds = new Set(candidates.map((f) => f.id));
 

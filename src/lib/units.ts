@@ -22,3 +22,13 @@ export function lbToKg(lb: number): number {
 export function kgToLb(kg: number): number {
   return Math.round(kg * LB_PER_KG);
 }
+
+export type ProteinGoal = { mode: 'gPerDay' | 'gPerKg'; value: number };
+
+/** Converts a protein goal between g/day (whole grams) and g/kg (2 decimals), so switching back and forth keeps it. */
+export function proteinGoalInMode(goal: ProteinGoal, mode: ProteinGoal['mode'], weightKg: number): ProteinGoal {
+  if (goal.mode === mode) return goal;
+  return mode === 'gPerDay'
+    ? { mode, value: Math.round(goal.value * weightKg) }
+    : { mode, value: Math.round((goal.value / weightKg) * 100) / 100 };
+}

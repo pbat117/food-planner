@@ -38,10 +38,8 @@ export function WeekScreen() {
 
   const dislike = (foodId: string) => {
     const next = setPref(settings, foodId, 'disliked');
-    const regularItems = { ...next.regularItems };
-    delete regularItems[foodId];
     setRowFood(null);
-    void propose(`Without ${getFood(foodId).name.toLowerCase()}, rebalanced.`, {}, { ...next, regularItems });
+    void propose(`Without ${getFood(foodId).name.toLowerCase()}, rebalanced.`, {}, next);
   };
 
   const removeFromYours = (foodId: string) => {

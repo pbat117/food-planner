@@ -50,7 +50,10 @@ function loadLastPlan(): WeekPlan | null {
     const raw = defaultStore()?.getItem(LAST_PLAN_KEY);
     if (!raw) return null;
     const p = JSON.parse(raw) as WeekPlan;
-    return Array.isArray(p?.items) && p.report?.lines && p.input ? p : null;
+    const t = p?.input?.targets;
+    const ok = Array.isArray(p?.items) && p.report?.lines?.energy && Number.isFinite(t?.dailyCalories) && t?.nutrients?.protein
+      && Array.isArray(p.input.supplements) && Array.isArray(p.input.supplementedNutrients) && p.input.locks;
+    return ok ? p : null;
   } catch {
     return null;
   }

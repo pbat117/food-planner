@@ -82,6 +82,13 @@ describe('AppState', () => {
     await waitFor(() => expect(JSON.parse(localStorage.getItem('planner.settings')!).maxDistinctFoods).toBe(12));
   });
 
+  it('ignores a saved plan that is missing its targets', async () => {
+    localStorage.setItem('planner.lastPlan', JSON.stringify({ items: [], report: { lines: {} }, input: {} }));
+    const { result } = setup([]);
+    await waitFor(() => expect(result.current.ready).toBe(true));
+    expect(result.current.plan).toBeNull();
+  });
+
   it('a bad profile shows an error instead of throwing', async () => {
     const { result } = setup([]);
     act(() => result.current.setSettings({ ...DEFAULT_SETTINGS, profile: { ...DEFAULT_SETTINGS.profile, age: 5 } }));

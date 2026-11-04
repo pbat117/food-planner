@@ -8,7 +8,7 @@ import { SUPPLEMENTABLE, supplementTiming } from '@/data/supplements';
 import { dailyCaloriesFor } from '@/engine/targets';
 import type { Activity, NutrientId, Profile } from '@/engine/types';
 import type { Settings } from '@/lib/settings';
-import { cmToFtIn, ftInToCm, kgToLb, lbToKg } from '@/lib/units';
+import { cmToFtIn, ftInToCm, kgToLb, lbToKg, proteinGoalInMode } from '@/lib/units';
 import { useAppState } from '@/state/AppState';
 import { NumberField, SelectField, TextField } from '@/ui/Fields';
 import { GroupedList, Row } from '@/ui/GroupedList';
@@ -91,7 +91,7 @@ export function ProfileScreen() {
               width="w-14" onChange={(value) => setProfile({ proteinGoal: { mode: protein.mode, value } })} />
             <span className="block w-32"><Segmented label="Protein unit" value={protein.mode}
               options={[{ value: 'gPerDay', label: 'g/day' }, { value: 'gPerKg', label: 'g/kg' }]}
-              onChange={(mode) => setProfile({ proteinGoal: { mode, value: mode === 'gPerDay' ? Math.round(protein.value * p.weightKg) : Math.round((protein.value / p.weightKg) * 10) / 10 } })} /></span>
+              onChange={(mode) => setProfile({ proteinGoal: proteinGoalInMode(protein, mode, p.weightKg) })} /></span>
           </span>} />
       </GroupedList>
 
