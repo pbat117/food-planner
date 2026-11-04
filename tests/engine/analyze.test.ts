@@ -26,7 +26,7 @@ describe('analyze', () => {
     expect(r.lines.vitC.status).toBe('low');
     const salty = analyze({}, [], [{ nutrient: 'sodium', dailyDose: 3000, label: 'salt' }], targets);
     expect(salty.lines.sodium.status).toBe('high');
-    expect(salty.lines.sodium.percent).toBeCloseTo(200);
+    expect(salty.lines.sodium.total).toBeCloseTo(21000);
   });
   it('caps without a target have no percent and are ok when under', () => {
     const r = analyze({ banana: 100 }, [], [], targets);

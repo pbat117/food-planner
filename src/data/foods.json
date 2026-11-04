@@ -257,7 +257,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 2,
-  "maxWeeklyGrams": 300,
+  "maxWeeklyGrams": 200,
   "minGrams": 100,
   "missing": []
  },
@@ -1517,7 +1517,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 112,
+  "maxWeeklyGrams": 56,
   "minGrams": 28,
   "missing": []
  },
@@ -1725,7 +1725,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1600,
+  "maxWeeklyGrams": 792,
   "minGrams": 200,
   "missing": [
    "vitA",
@@ -1782,7 +1782,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 454,
   "minGrams": 227,
   "missing": [
    "fiber",
@@ -1839,7 +1839,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 340,
   "minGrams": 100,
   "missing": []
  },
@@ -1891,7 +1891,7 @@
   },
   "roundTo": 30,
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 420,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "dailyHint": "about 1 scoop a day",
   "missing": []
@@ -1944,7 +1944,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 2000,
+  "maxWeeklyGrams": 1000,
   "minGrams": 150,
   "missing": []
  },
@@ -1996,7 +1996,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 2000,
+  "maxWeeklyGrams": 1000,
   "minGrams": 150,
   "missing": []
  },
@@ -2048,7 +2048,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 2000,
+  "maxWeeklyGrams": 1000,
   "minGrams": 150,
   "missing": []
  },
@@ -2100,7 +2100,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 2000,
+  "maxWeeklyGrams": 1000,
   "minGrams": 150,
   "missing": []
  },
@@ -2152,7 +2152,7 @@
   },
   "roundTo": 250,
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 3500,
+  "maxWeeklyGrams": 2000,
   "minGrams": 250,
   "missing": []
  },
@@ -2204,7 +2204,7 @@
   },
   "roundTo": 250,
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 3500,
+  "maxWeeklyGrams": 2000,
   "minGrams": 250,
   "missing": []
  },
@@ -2256,7 +2256,7 @@
   },
   "roundTo": 250,
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 3500,
+  "maxWeeklyGrams": 2000,
   "minGrams": 250,
   "missing": []
  },
@@ -2308,7 +2308,7 @@
   },
   "roundTo": 250,
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 3500,
+  "maxWeeklyGrams": 2000,
   "minGrams": 250,
   "missing": []
  },
@@ -2360,7 +2360,7 @@
   },
   "roundTo": 250,
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 2000,
+  "maxWeeklyGrams": 1000,
   "minGrams": 250,
   "missing": []
  },
@@ -2412,7 +2412,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 1600,
+  "maxWeeklyGrams": 500,
   "minGrams": 100,
   "missing": []
  },
@@ -2464,7 +2464,7 @@
   },
   "roundTo": 25,
   "shelfLifeDays": 28,
-  "maxWeeklyGrams": 300,
+  "maxWeeklyGrams": 200,
   "minGrams": 50,
   "missing": []
  },
@@ -2516,7 +2516,7 @@
   },
   "roundTo": 25,
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 300,
+  "maxWeeklyGrams": 200,
   "minGrams": 50,
   "missing": []
  },
@@ -2568,7 +2568,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 60,
-  "maxWeeklyGrams": 100,
+  "maxWeeklyGrams": 60,
   "minGrams": 20,
   "missing": []
  },
@@ -2620,7 +2620,7 @@
   },
   "roundTo": 25,
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 250,
+  "maxWeeklyGrams": 170,
   "minGrams": 50,
   "missing": []
  },
@@ -2672,7 +2672,7 @@
   },
   "roundTo": 25,
   "shelfLifeDays": 28,
-  "maxWeeklyGrams": 300,
+  "maxWeeklyGrams": 200,
   "minGrams": 50,
   "missing": []
  },
@@ -2724,7 +2724,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 500,
+  "maxWeeklyGrams": 250,
   "minGrams": 100,
   "missing": []
  },
@@ -2776,7 +2776,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 60,
-  "maxWeeklyGrams": 140,
+  "maxWeeklyGrams": 100,
   "minGrams": 14,
   "missing": []
  },
@@ -2828,7 +2828,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 750,
   "minGrams": 125,
   "missing": []
  },
@@ -2880,7 +2880,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 750,
   "minGrams": 125,
   "missing": []
  },
@@ -2932,7 +2932,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 800,
   "minGrams": 100,
   "missing": []
  },
@@ -2984,7 +2984,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 750,
   "minGrams": 125,
   "missing": []
  },
@@ -3036,7 +3036,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 750,
   "minGrams": 125,
   "missing": []
  },
@@ -3088,7 +3088,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 750,
   "minGrams": 125,
   "missing": []
  },
@@ -3140,7 +3140,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1200,
+  "maxWeeklyGrams": 600,
   "minGrams": 100,
   "missing": []
  },
@@ -3192,7 +3192,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 500,
   "minGrams": 100,
   "missing": []
  },
@@ -3244,7 +3244,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 600,
+  "maxWeeklyGrams": 283,
   "minGrams": 50,
   "missing": [
    "choline"
@@ -3350,7 +3350,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 1000,
   "minGrams": 100,
   "missing": []
  },
@@ -3402,7 +3402,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 1000,
   "minGrams": 100,
   "missing": []
  },
@@ -3454,7 +3454,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 500,
   "minGrams": 100,
   "missing": []
  },
@@ -3506,7 +3506,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 700,
   "minGrams": 100,
   "missing": [
    "selenium",
@@ -3563,7 +3563,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 500,
   "minGrams": 100,
   "missing": [
    "vitC"
@@ -3617,7 +3617,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 454,
   "minGrams": 100,
   "missing": [
    "vitA",
@@ -3673,7 +3673,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 454,
   "minGrams": 100,
   "missing": []
  },
@@ -3725,7 +3725,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 640,
   "minGrams": 64,
   "missing": []
  },
@@ -3777,7 +3777,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 600,
+  "maxWeeklyGrams": 312,
   "minGrams": 52,
   "missing": []
  },
@@ -3829,7 +3829,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -3881,7 +3881,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": [
    "selenium",
@@ -3938,7 +3938,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -3990,7 +3990,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": [
    "choline"
@@ -4044,7 +4044,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": [
    "vitE",
@@ -4099,7 +4099,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 200,
+  "maxWeeklyGrams": 100,
   "minGrams": 20,
   "missing": []
  },
@@ -4151,7 +4151,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 30,
-  "maxWeeklyGrams": 2000,
+  "maxWeeklyGrams": 426,
   "minGrams": 150,
   "missing": []
  },
@@ -4203,7 +4203,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 2000,
+  "maxWeeklyGrams": 400,
   "minGrams": 130,
   "missing": []
  },
@@ -4255,7 +4255,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 500,
   "minGrams": 100,
   "missing": []
  },
@@ -4307,7 +4307,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 800,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -4359,7 +4359,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 600,
   "minGrams": 150,
   "missing": []
  },
@@ -4411,7 +4411,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 575,
   "minGrams": 150,
   "missing": []
  },
@@ -4463,7 +4463,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 488,
   "minGrams": 61,
   "missing": []
  },
@@ -4515,7 +4515,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 240,
   "minGrams": 60,
   "missing": []
  },
@@ -4567,7 +4567,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 400,
   "minGrams": 60,
   "missing": []
  },
@@ -4619,7 +4619,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 10,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 400,
   "minGrams": 60,
   "missing": [
    "vitE",
@@ -4677,7 +4677,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1200,
+  "maxWeeklyGrams": 492,
   "minGrams": 100,
   "missing": []
  },
@@ -4729,7 +4729,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1200,
+  "maxWeeklyGrams": 600,
   "minGrams": 150,
   "missing": []
  },
@@ -4781,7 +4781,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1200,
+  "maxWeeklyGrams": 600,
   "minGrams": 150,
   "missing": []
  },
@@ -4833,7 +4833,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 30,
-  "maxWeeklyGrams": 800,
+  "maxWeeklyGrams": 330,
   "minGrams": 55,
   "missing": []
  },
@@ -4885,7 +4885,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 60,
-  "maxWeeklyGrams": 70,
+  "maxWeeklyGrams": 42,
   "minGrams": 6,
   "missing": []
  },
@@ -4937,7 +4937,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 454,
   "minGrams": 100,
   "missing": []
  },
@@ -4989,7 +4989,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 500,
+  "maxWeeklyGrams": 400,
   "minGrams": 50,
   "missing": [
    "satFat",
@@ -5051,7 +5051,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 700,
+  "maxWeeklyGrams": 400,
   "minGrams": 85,
   "missing": [
    "magnesium"
@@ -5105,7 +5105,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 4,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 450,
   "minGrams": 150,
   "missing": []
  },
@@ -5157,7 +5157,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 340,
   "minGrams": 100,
   "missing": []
  },
@@ -5209,7 +5209,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 340,
   "minGrams": 100,
   "missing": []
  },
@@ -5261,7 +5261,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 30,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 450,
   "minGrams": 150,
   "missing": []
  },
@@ -5313,7 +5313,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 30,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 400,
   "minGrams": 150,
   "missing": []
  },
@@ -5365,7 +5365,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 400,
   "minGrams": 150,
   "missing": []
  },
@@ -5417,7 +5417,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1200,
+  "maxWeeklyGrams": 600,
   "minGrams": 100,
   "missing": []
  },
@@ -5469,7 +5469,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -5521,7 +5521,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 600,
+  "maxWeeklyGrams": 400,
   "minGrams": 50,
   "missing": []
  },
@@ -5625,7 +5625,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 800,
+  "maxWeeklyGrams": 400,
   "minGrams": 40,
   "missing": []
  },
@@ -5677,7 +5677,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 800,
+  "maxWeeklyGrams": 400,
   "minGrams": 82,
   "missing": []
  },
@@ -5729,7 +5729,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 60,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 1000,
   "minGrams": 200,
   "missing": [
    "choline"
@@ -5783,7 +5783,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 60,
-  "maxWeeklyGrams": 1500,
+  "maxWeeklyGrams": 400,
   "minGrams": 200,
   "missing": [
    "vitE",
@@ -5839,7 +5839,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 3,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 400,
   "minGrams": 90,
   "missing": []
  },
@@ -5891,7 +5891,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 400,
   "minGrams": 200,
   "missing": []
  },
@@ -5943,7 +5943,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -5995,7 +5995,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -6047,7 +6047,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -6151,7 +6151,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 500,
+  "maxWeeklyGrams": 400,
   "minGrams": 50,
   "missing": []
  },
@@ -6203,7 +6203,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 4,
-  "maxWeeklyGrams": 800,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -6255,7 +6255,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 800,
+  "maxWeeklyGrams": 400,
   "minGrams": 120,
   "missing": []
  },
@@ -6307,7 +6307,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 800,
+  "maxWeeklyGrams": 400,
   "minGrams": 130,
   "missing": [
    "choline"
@@ -6361,7 +6361,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 700,
+  "maxWeeklyGrams": 400,
   "minGrams": 115,
   "missing": []
  },
@@ -6413,7 +6413,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 700,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -6465,7 +6465,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 800,
+  "maxWeeklyGrams": 400,
   "minGrams": 100,
   "missing": []
  },
@@ -6517,7 +6517,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 400,
   "minGrams": 200,
   "missing": []
  },
@@ -6569,7 +6569,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 1650,
+  "maxWeeklyGrams": 822,
   "minGrams": 200,
   "missing": []
  },
@@ -6673,7 +6673,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 340,
   "minGrams": 150,
   "missing": []
  },
@@ -6725,7 +6725,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 454,
   "minGrams": 150,
   "missing": []
  },
@@ -6777,7 +6777,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 454,
   "minGrams": 150,
   "missing": [
    "vitE",
@@ -6833,7 +6833,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 454,
   "minGrams": 150,
   "missing": []
  },
@@ -6885,7 +6885,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 454,
   "minGrams": 150,
   "missing": []
  },
@@ -7145,7 +7145,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 826,
   "minGrams": 100,
   "missing": []
  },
@@ -7197,7 +7197,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 30,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 728,
   "minGrams": 100,
   "missing": []
  },
@@ -7249,7 +7249,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 262,
   "minGrams": 100,
   "missing": []
  },
@@ -7301,7 +7301,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 300,
   "minGrams": 75,
   "missing": []
  },
@@ -7353,7 +7353,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 1050,
+  "maxWeeklyGrams": 450,
   "minGrams": 75,
   "missing": []
  },
@@ -7405,7 +7405,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 4,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 340,
   "minGrams": 100,
   "missing": []
  },
@@ -7457,7 +7457,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 340,
   "minGrams": 100,
   "missing": []
  },
@@ -7509,7 +7509,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 4,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 454,
   "minGrams": 100,
   "missing": []
  },
@@ -7561,7 +7561,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 3,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 340,
   "minGrams": 100,
   "missing": []
  },
@@ -7613,7 +7613,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 500,
   "minGrams": 150,
   "missing": []
  },
@@ -7665,7 +7665,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 534,
   "minGrams": 100,
   "missing": []
  },
@@ -7717,7 +7717,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 4,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 450,
   "minGrams": 100,
   "missing": []
  },
@@ -7769,7 +7769,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 4,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 426,
   "minGrams": 100,
   "missing": []
  },
@@ -7821,7 +7821,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 264,
   "minGrams": 66,
   "missing": []
  },
@@ -7873,7 +7873,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 336,
   "minGrams": 100,
   "missing": []
  },
@@ -7925,7 +7925,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 450,
   "minGrams": 150,
   "missing": []
  },
@@ -7977,7 +7977,7 @@
   },
   "roundTo": 100,
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 2000,
+  "maxWeeklyGrams": 900,
   "minGrams": 200,
   "missing": []
  },
@@ -8029,7 +8029,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 550,
   "minGrams": 275,
   "missing": []
  },
@@ -8081,7 +8081,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 500,
   "minGrams": 250,
   "missing": []
  },
@@ -8133,7 +8133,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 900,
+  "maxWeeklyGrams": 450,
   "minGrams": 100,
   "missing": []
  },
@@ -8185,7 +8185,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 246,
   "minGrams": 100,
   "missing": []
  },
@@ -8237,7 +8237,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 1000,
+  "maxWeeklyGrams": 296,
   "minGrams": 74,
   "missing": []
  },
@@ -8289,7 +8289,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 116,
   "minGrams": 29,
   "missing": []
  },
@@ -8341,7 +8341,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 21,
-  "maxWeeklyGrams": 270,
+  "maxWeeklyGrams": 88,
   "minGrams": 22,
   "missing": []
  },
@@ -8393,7 +8393,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 450,
   "minGrams": 100,
   "missing": []
  },
@@ -8445,7 +8445,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 30,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 280,
   "minGrams": 100,
   "missing": []
  },
@@ -8497,7 +8497,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 700,
+  "maxWeeklyGrams": 210,
   "minGrams": 70,
   "missing": []
  },
@@ -8549,7 +8549,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 5,
-  "maxWeeklyGrams": 700,
+  "maxWeeklyGrams": 220,
   "minGrams": 55,
   "missing": []
  },
@@ -8601,7 +8601,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 7,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 336,
   "minGrams": 100,
   "missing": [
    "pantothenicAcid"
@@ -8655,8 +8655,8 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
-  "minGrams": 48,
+  "maxWeeklyGrams": 48,
+  "minGrams": 24,
   "missing": [
    "satFat",
    "selenium",
@@ -8714,7 +8714,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 300,
+  "maxWeeklyGrams": 86,
   "minGrams": 43,
   "missing": [
    "pantothenicAcid"
@@ -8768,7 +8768,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 300,
+  "maxWeeklyGrams": 80,
   "minGrams": 40,
   "missing": []
  },
@@ -8820,8 +8820,8 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 300,
-  "minGrams": 40,
+  "maxWeeklyGrams": 20,
+  "minGrams": 10,
   "missing": []
  },
  {
@@ -8872,8 +8872,8 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 300,
-  "minGrams": 40,
+  "maxWeeklyGrams": 16,
+  "minGrams": 8,
   "missing": []
  },
  {
@@ -8924,7 +8924,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 454,
   "minGrams": 150,
   "missing": []
  },
@@ -8976,7 +8976,7 @@
   },
   "roundTo": "unit",
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 1400,
+  "maxWeeklyGrams": 454,
   "minGrams": 150,
   "missing": []
  },
@@ -9028,7 +9028,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "dailyHint": "30 g a day, a small handful",
   "missing": []
@@ -9081,7 +9081,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "dailyHint": "30 g a day, a small handful",
   "missing": []
@@ -9134,7 +9134,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "missing": [
    "choline"
@@ -9188,7 +9188,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "missing": [
    "vitK",
@@ -9243,7 +9243,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "missing": []
  },
@@ -9295,7 +9295,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "missing": []
  },
@@ -9400,7 +9400,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "missing": []
  },
@@ -9452,7 +9452,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 350,
+  "maxWeeklyGrams": 210,
   "minGrams": 30,
   "missing": [
    "vitK",
@@ -9507,7 +9507,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 105,
   "minGrams": 20,
   "missing": [
    "vitA",
@@ -9567,7 +9567,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 105,
   "minGrams": 20,
   "missing": []
  },
@@ -9619,7 +9619,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 105,
   "minGrams": 20,
   "missing": []
  },
@@ -9671,7 +9671,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 105,
   "minGrams": 20,
   "missing": []
  },
@@ -9723,7 +9723,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 105,
   "minGrams": 20,
   "missing": [
    "selenium",
@@ -9782,7 +9782,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 180,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 105,
   "minGrams": 20,
   "missing": []
  },
@@ -10042,7 +10042,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 150,
   "minGrams": 14,
   "dailyHint": "1–2 tbsp a day for cooking",
   "missing": []
@@ -10095,7 +10095,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 150,
   "minGrams": 14,
   "missing": [
    "vitD",
@@ -10152,7 +10152,7 @@
   },
   "roundTo": 10,
   "shelfLifeDays": 365,
-  "maxWeeklyGrams": 210,
+  "maxWeeklyGrams": 150,
   "minGrams": 14,
   "missing": []
  },
@@ -10417,7 +10417,7 @@
   },
   "roundTo": 50,
   "shelfLifeDays": 14,
-  "maxWeeklyGrams": 450,
+  "maxWeeklyGrams": 400,
   "minGrams": 50,
   "missing": []
  },

@@ -8,11 +8,11 @@ const fruitOf = (amounts: Record<string, number>) =>
 
 describe('fruit rule', () => {
   it('includes at least the daily fruit amount, from a limited number of kinds', async () => {
-    const r = await optimize({ ...base, fruit: { gramsPerDay: 300, maxKinds: 4 } });
+    const r = await optimize({ ...base, fruit: { gramsPerDay: 300, maxKinds: 5 } });
     const fruit = fruitOf(r.amounts);
     expect(fruit.reduce((s, [, g]) => s + g, 0)).toBeGreaterThanOrEqual(2100 - 0.5);
     expect(fruit.length).toBeGreaterThan(0);
-    expect(fruit.length).toBeLessThanOrEqual(4);
+    expect(fruit.length).toBeLessThanOrEqual(5);
   });
   it('locked fruit counts toward the amount and the kinds', async () => {
     const r = await optimize({ ...base, locks: { banana: 2100 }, fruit: { gramsPerDay: 300, maxKinds: 1 } });

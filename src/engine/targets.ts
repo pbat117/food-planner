@@ -50,9 +50,9 @@ export function computeWeeklyTargets(profile: Profile): WeeklyTargets {
   n.fiber = { id: 'fiber', target: w(fiber), lowBelow: w(fiber) * 0.9 };
 
   const fatMin = (0.2 * kcal) / 9;
-  n.fat = { id: 'fat', target: w(fatMin), lowBelow: w(fatMin), max: w((0.35 * kcal) / 9) };
+  n.fat = { id: 'fat', target: w(fatMin), lowBelow: w(fatMin) * 0.9, max: w((0.35 * kcal) / 9) };
   const carbMin = (0.45 * kcal) / 4;
-  n.carbs = { id: 'carbs', target: w(carbMin), lowBelow: w(carbMin), max: w((0.65 * kcal) / 4) };
+  n.carbs = { id: 'carbs', target: w(carbMin), lowBelow: w(carbMin) * 0.9, max: w((0.65 * kcal) / 4) };
 
   n.satFat = { id: 'satFat', max: w((0.1 * kcal) / 9) };
   n.addedSugar = { id: 'addedSugar', max: w((0.1 * kcal) / 4) };

@@ -95,7 +95,7 @@ export function buildLp(input: PlanInput): Model {
 
     if (id === 'energy') {
       const w = HARD / t.target!;
-      rows.push(`elo: ${lhs}\n + 1 elo >= ${num(t.lowBelow! - F)}`);
+      rows.push(`elo: ${lhs}\n + 1 elo >= ${num(t.lowBelow! / CAP_MARGIN - F)}`);
       rows.push(`ehi: ${lhs}\n - 1 ehi <= ${num(CAP_MARGIN * t.max! - F)}`);
       objective.push(`+ ${num(w)} elo`, `+ ${num(w)} ehi`);
       relaxVars.set('elo', 'energy').set('ehi', 'energy');

@@ -9,12 +9,15 @@
     "proteinGoal": { "mode": "gPerDay", "value": 136 }
   },
   "liked": [
-    "ground-beef-85", "chicken-breast", "eggs", "black-beans", "brown-rice", "oats",
-    "potato", "sweet-potato", "spinach", "broccoli", "red-pepper",
+    "ground-beef-85", "chicken-breast",
     "banana", "orange", "kiwi", "avocado", "blackberries",
-    "almonds", "greek-yogurt", "milk", "olive-oil"
+    "broccoli", "spinach", "sweet-potato", "red-pepper", "potato", "almonds", "black-beans",
+    "brown-rice", "white-rice", "oats", "whole-wheat-pasta", "whole-wheat-bread", "corn-tortillas", "quinoa",
+    "milk", "greek-yogurt", "cheddar", "cottage-cheese",
+    "olive-oil", "peanut-butter", "walnuts", "chia-seeds", "flaxseed",
+    "lentils", "chickpeas", "carrots", "onion", "tomato", "frozen-mixed-veg"
   ],
-  "disliked": [],
+  "disliked": ["eggs"],
   "maxDistinctFoods": 18,
   "fruit": { "gramsPerDay": 300, "maxKinds": 5 },
   "supplements": [

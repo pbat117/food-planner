@@ -61,7 +61,7 @@ async function main(): Promise<void> {
     if (r.lines[id].status === 'low') {
       const s = suggestForLow(plan, id)[0];
       console.log(s
-        ? `- ${name} is low (${Math.round(r.lines[id].percent ?? 0)}%): add ${s.addGrams} g ${getFood(s.foodId).name} → ${Math.round(s.newPercent)}%${s.liked ? '' : ' (not on your liked list)'}, or supplement it.`
+        ? `- ${name} is low (${Math.round(r.lines[id].percent ?? 0)}%): add ${s.addGrams} g ${getFood(s.foodId).name} → ${Math.round(s.newPercent)}%${s.liked ? '' : ' (not on your liked list)'}${['energy','protein','carbs','fat','fiber'].includes(id) ? '' : ', or supplement it'}.`
         : `- ${name} is low: no single food fixes it without breaking a limit; consider a supplement.`);
     } else {
       const e = explainHigh(plan, id);

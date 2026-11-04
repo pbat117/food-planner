@@ -61,7 +61,8 @@ export function driFor(id: Micro, sex: Sex, age: number): DriValue {
   const total = (daily: number, upper?: number): DriValue => ({ daily, upper, upperScope: upper ? 'total' : undefined });
   const supp = (daily: number, upper: number): DriValue => ({ daily, upper, upperScope: 'supplementsOnly' });
   switch (id) {
-    case 'sodium': return total(1500, 2300);
+    // Only the upper limit is used: home cooking adds salt that food data can't see, so a "low" flag would mislead.
+    case 'sodium': return { upper: 2300, upperScope: 'total' };
     case 'potassium': return total(m ? 3400 : 2600);
     case 'calcium': return total(age >= 71 || (!m && age >= 51) ? 1200 : 1000, age >= 51 ? 2000 : 2500);
     case 'iron': return total(m || age >= 51 ? 8 : 18, 45);

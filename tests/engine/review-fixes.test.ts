@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { computeWeeklyTargets } from '@/engine/targets';
-import { optimize } from '@/engine/optimizer';
+import { buildLp, optimize } from '@/engine/optimizer';
 import { analyze } from '@/engine/analyze';
 import { roundAmount } from '@/engine/rounding';
 import { planWeek } from '@/engine/planWeek';
@@ -14,11 +14,11 @@ describe('review fixes', () => {
     expect(a.max).toBeUndefined();
     expect(a.supplementMax).toBe(3000);
   });
-  it('orange-vegetable-heavy liked list still meets calories', async () => {
-    const liked = ['carrots', 'sweet-potato', 'spinach', 'kale', 'butternut-squash', 'pumpkin-canned',
-      'chicken-breast', 'brown-rice', 'olive-oil', 'eggs', 'black-beans', 'almonds', 'banana', 'milk'];
-    const r = await optimize({ ...base, likedFoodIds: liked });
-    expect(analyze(r.amounts, [], [], targets).lines.energy.status).toBe('ok');
+  it('the optimizer never limits food because of vitamin A', () => {
+    const ids = Object.keys(targets.nutrients);
+    const lp = buildLp({ ...base, likedFoodIds: ['carrots', 'sweet-potato', 'spinach', 'kale', 'butternut-squash'] }).lp;
+    expect(lp).not.toMatch(new RegExp('^ m' + ids.indexOf('vitA') + ':', 'm'));
+    expect(lp).toMatch(new RegExp('^ m' + ids.indexOf('iron') + ':', 'm'));
   });
   it('beef liver weekly max keeps preformed vitamin A under the upper limit', () => {
     const f = getFood('beef-liver');
@@ -45,5 +45,23 @@ describe('review fixes', () => {
   it('zero-gram locks are left out of the plan', async () => {
     const p = await planWeek({ ...base, locks: { broccoli: 0 } });
     expect(p.items.find((i) => i.foodId === 'broccoli')).toBeUndefined();
+  });
+});
+
+describe('sodium', () => {
+  it('is only a cap: unsalted whole foods are never flagged low', () => {
+    const s = computeWeeklyTargets(man30).nutrients.sodium;
+    expect(s.target).toBeUndefined();
+    expect(s.lowBelow).toBeUndefined();
+    expect(s.max).toBe(16100);
+  });
+});
+
+describe('macro leeway', () => {
+  it('fat and carbs are only low below 90% of their minimum, like other nutrients', () => {
+    const n = computeWeeklyTargets(man30).nutrients;
+    expect(n.carbs.lowBelow).toBeCloseTo(n.carbs.target! * 0.9);
+    expect(n.fat.lowBelow).toBeCloseTo(n.fat.target! * 0.9);
+    expect(n.protein.lowBelow).toBeCloseTo(n.protein.target!);
   });
 });
