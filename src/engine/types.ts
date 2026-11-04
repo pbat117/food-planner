@@ -41,6 +41,28 @@ export interface WeeklyTargets {
   nutrients: Record<NutrientId, NutrientTarget>;
 }
 
+export type FoodCategory = 'protein' | 'carb' | 'vegetable' | 'fruit' | 'fat' | 'dairy' | 'other';
+export type Aisle = 'Produce' | 'Meat & Fish' | 'Dairy & Eggs' | 'Pantry' | 'Frozen';
+
+export interface Food {
+  id: string;
+  fdcId: number;
+  name: string;
+  per100g: NutrientVector;
+  category: FoodCategory;
+  aisle: Aisle;
+  /** One "roughly" unit. name '' for countable fruit (label is just the number). */
+  unit: { name: string; plural: string; grams: number };
+  /** Round to whole units, or to a gram step. */
+  roundTo: 'unit' | number;
+  shelfLifeDays: number;
+  maxWeeklyGrams: number;
+  minGrams: number;
+  dailyHint?: string;
+  /** Nutrients USDA had no value for (treated as 0). */
+  missing: NutrientId[];
+}
+
 export class UnsupportedProfileError extends Error {
   constructor(message: string) {
     super(message);
