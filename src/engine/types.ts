@@ -63,6 +63,41 @@ export interface Food {
   missing: NutrientId[];
 }
 
+/** A recipe chosen for the week. ingredients = one batch; count = batches this week. */
+export interface RecipeUse {
+  recipeId: string;
+  name: string;
+  ingredients: { foodId: string; grams: number }[];
+  count: number;
+}
+
+export interface SupplementUse {
+  nutrient: NutrientId;
+  dailyDose: number;
+  label: string;
+}
+
+export type Status = 'low' | 'ok' | 'high';
+export type SourceKind = 'food' | 'recipe' | 'supplement';
+
+export interface NutrientLine {
+  id: NutrientId;
+  total: number;
+  target?: number;
+  max?: number;
+  /** total / target × 100 */
+  percent?: number;
+  status: Status;
+  /** Sorted by amount, largest first. */
+  sources: { label: string; kind: SourceKind; amount: number }[];
+}
+
+export interface NutrientReport {
+  lines: Record<NutrientId, NutrientLine>;
+  weeklyCalories: number;
+  dailyCalories: number;
+}
+
 export class UnsupportedProfileError extends Error {
   constructor(message: string) {
     super(message);
