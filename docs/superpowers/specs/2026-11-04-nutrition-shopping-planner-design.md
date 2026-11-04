@@ -154,6 +154,19 @@ Variables: grams `x_f` for each candidate food (liked foods; if none, all non-di
 
 "Suggest bowls" divides the week's bowl-eligible totals across bowl meal slots (bowl meals/day × 7 − recipe servings). Each bowl = 1 protein + 1 carb + 1–2 vegetables + optional fat, portions sized so the slots evenly use up each trip's perishables first. Shows protein and calories per bowl; "Shuffle" regenerates.
 
+## 10b. Weekly list format (from the user's sample, 2026-11-04)
+
+The weekly list (and each trip's list) follows the user's sample `Weekly_Food_List_Sample.pdf`:
+
+- **Grouped by kind:** Meat · Fruit · Vegetables and beans · Grains · Dairy · Nuts and nut butter · Supplements and extras.
+- **Three columns per row:** Food · Grams per week · Estimated items.
+- **Grams say what they measure** (`gramsBasis` per food): "raw", "cooked (about N g raw)", "peeled", "flesh", "drained", "dry", "cooked (about N g dry)". Meat shows cooked and raw; rice shows cooked and dry.
+- **Estimated items name the package size:** "About 3 packs of 450 g", "2 cans of about 398 mL", "1 carton of 2 L", "2 containers of about 170 g", and partial packages, e.g. "about 14 tbsp, under half a 500 g jar" or "1 tub, partly used".
+- **Supplements and extras are rows on the list** (vitamin D, omega-3, protein powder, creatine, iodized salt), with per-day doses ("7 daily doses, per label").
+- **Weekly nutrient coverage table:** % of weekly target per nutrient, with rows under target shaded.
+- **Daily average row:** calories, protein, carbs, fat, fiber.
+- **Notes:** the main gaps and what to do about them, iodine handled by "use iodized salt", and a short estimates disclaimer ("package sizes vary, so grams are the amounts to go by").
+
 ## 11. UI (Apple Human Interface Guidelines)
 
 - Principles: clarity, deference, depth. System font stack (SF Pro on Apple devices), iOS type scale (Large Title, Headline, Body, Footnote), Dynamic-Type-friendly sizing, iOS system colors, automatic dark mode, inset grouped lists, bottom sheets, segmented controls, steppers, switches, swipe actions, ≥ 44 pt tap targets, iOS-like motion. SF-Symbols-style open-source line icons (SF Symbols themselves are licensed for Apple platforms only).
