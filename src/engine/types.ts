@@ -98,6 +98,29 @@ export interface NutrientReport {
   dailyCalories: number;
 }
 
+export interface PlanInput {
+  targets: WeeklyTargets;
+  /** Candidate foods; empty → all non-disliked foods. */
+  likedFoodIds: string[];
+  dislikedFoodIds: string[];
+  recipes: RecipeUse[];
+  /** foodId → weekly grams; always honored exactly. */
+  locks: Record<string, number>;
+  supplements: SupplementUse[];
+  /** The optimizer ignores deficits for these (the user supplements them). */
+  supplementedNutrients: NutrientId[];
+  /** Default 15. */
+  maxDistinctFoods: number;
+}
+
+export interface OptimizeResult {
+  /** foodId → weekly grams, including locks. Recipes are not included. */
+  amounts: Record<string, number>;
+  /** Constraints that had to be broken to produce a plan. */
+  relaxed: NutrientId[];
+  status: 'optimal' | 'timeLimit' | 'fallback';
+}
+
 export class UnsupportedProfileError extends Error {
   constructor(message: string) {
     super(message);
