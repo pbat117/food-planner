@@ -1,0 +1,19 @@
+{
+  "profile": {
+    "age": 30,
+    "sex": "male",
+    "heightCm": 180,
+    "weightKg": 80,
+    "activity": "moderate",
+    "goal": "maintain",
+    "proteinGoal": { "mode": "gPerKg", "value": 1.6 }
+  },
+  "liked": [
+    "ground-beef-85", "chicken-breast", "eggs", "black-beans", "brown-rice", "oats",
+    "potato", "sweet-potato", "spinach", "broccoli", "red-pepper",
+    "banana", "orange", "kiwi", "avocado", "blackberries",
+    "almonds", "greek-yogurt", "milk", "olive-oil", "walnuts", "chia-seeds"
+  ],
+  "disliked": [],
+  "maxDistinctFoods": 18
+}
