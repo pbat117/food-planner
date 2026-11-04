@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Food Planner
 
-## Getting Started
+A weekly shopping list that covers about 90% or more of your recommended nutrients, built from foods you choose. No AI: a nutrition optimizer (the HiGHS solver) sizes the foods, using USDA nutrient data and the NIH/National Academies reference values.
 
-First, run the development server:
+- **Your foods** are always on the list; the app sizes them. Staples (rice, milk, …) come from foods you like.
+- The list shows grams and estimated items side by side, grouped like a shopping list, with a daily average and notes.
+- The **nutrient report** shows each nutrient as a percent of the weekly target and suggests a food for anything low.
+- **Don't like** a food, or fix its amount, and see Now vs New before you apply it. Undo goes back a step.
+- Supplements you take (e.g. vitamin D, omega-3) are listed with when to take them.
+- Settings and your last list stay on your device (in the browser). Accounts and sync come later.
+
+## Run it on your computer
+
+Requires Node.js 20 or newer.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000. `npm test` runs the tests.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Put it online (free, on Vercel)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a free GitHub account at github.com, then a new **empty** repository called `food-planner` (no README, no .gitignore).
+2. In this folder, connect it and upload the code (GitHub shows these lines on the empty repository's page):
 
-## Learn More
+   ```bash
+   git remote add origin https://github.com/YOUR-USERNAME/food-planner.git
+   git push -u origin main
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Go to vercel.com, choose **Sign up** → **Continue with GitHub** (the free Hobby plan).
+4. Choose **Add New → Project**, pick `food-planner`, keep the framework preset **Next.js**, and choose **Deploy**.
+5. Open the address Vercel gives you on your iPhone in Safari, then **Share → Add to Home Screen** so it opens like an app.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Every later `git push` to `main` redeploys automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Updating the food data
 
-## Deploy on Vercel
+`src/data/foods.json` is generated from `data/foods-seed.csv` and the USDA SR Legacy download:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx tsx scripts/build-foods.ts <path to the unzipped SR Legacy CSV folder>
+```
