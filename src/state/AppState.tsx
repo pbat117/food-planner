@@ -54,6 +54,9 @@ export function today(): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
+/** A trip starts on the planned date, or today if that date has passed. */
+const tripDate = (next: string) => (next && next > today() ? next : today());
+
 function safeList(build: (p: WeekPlan) => WeeklyList | null, p: WeekPlan | null): WeeklyList | null {
   if (!p) return null;
   try {
@@ -142,17 +145,20 @@ export function AppStateProvider({
     saveSettings(next);
   }, []);
 
-  const setPantry = useCallback((p: Record<string, number>) => {
-    pantryRef.current = p;
-    setPantryState(p);
-    savePantry(p);
-  }, []);
-
   const showTrip = useCallback((t: TripPlan | null) => {
     tripRef.current = t;
     setTrip(t);
     saveLastTrip(t);
   }, []);
+
+  const setPantry = useCallback((p: Record<string, number>) => {
+    pantryRef.current = p;
+    setPantryState(p);
+    savePantry(p);
+    // The shown trip's shopping list depends on the pantry: work it out again.
+    const t = tripRef.current;
+    if (t) showTrip({ ...t, ...purchase(t.plan.items, p) });
+  }, [showTrip]);
 
   const applyPlan = useCallback((p: WeekPlan) => {
     const cur = tripRef.current;
@@ -163,7 +169,7 @@ export function AppStateProvider({
     const s = settingsRef.current;
     // A plan edited on screen (e.g. an amount you typed) gets its shopping list worked out here.
     const t = tripsByPlan.current.get(p) ?? {
-      date: cur?.date ?? (s.nextTripDate || today()),
+      date: cur?.date ?? tripDate(s.nextTripDate),
       days: cur?.days ?? s.shopEveryDays,
       plan: p,
       ...purchase(p.items, pantryRef.current),
@@ -193,7 +199,7 @@ export function AppStateProvider({
         const args: TripArgs = {
           // Locks passed in already hold this trip's regular items, so they are not added twice.
           base: { ...toPlanInput(s), locks: {}, ...overrides },
-          date: s.nextTripDate || today(),
+          date: tripDate(s.nextTripDate),
           days,
           history: historyRef.current,
           pantry: pantryRef.current,

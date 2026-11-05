@@ -102,14 +102,25 @@ function capFruit(ids: string[], maxKinds?: number): string[] {
 export function buildTripInput(a: TripArgs): PlanInput {
   const w = historyWindow(a.history, a.date, a.days);
   const windowDays = Math.min(7, a.days + w.days);
+  const locks = { ...a.base.locks, ...a.regularLocks };
+  const locked = new Set(Object.keys(locks).filter((id) => locks[id] > 0));
+  const disliked = new Set(a.base.dislikedFoodIds);
+  // Locked foods are already in the plan; they don't need a due slot.
+  const due = dueFoods(a.includeFoodIds.filter((id) => !locked.has(id)), w.seen, a.history, a.date, a.base.maxDistinctFoods);
+  // Use up what is in the pantry before the plan picks other long-keepers.
+  const fromPantry = Object.keys(a.pantry)
+    .filter((id) => a.pantry[id] >= getFood(id).minGrams && !locked.has(id) && !disliked.has(id) && !due.includes(id));
+  const slots = Math.max(0, Math.floor(a.base.maxDistinctFoods / 2));
+  const lockedFruit = [...locked].filter((id) => getFood(id).category === 'fruit').length;
+  const maxKinds = a.base.fruit ? Math.max(0, a.base.fruit.maxKinds - lockedFruit) : undefined;
   return {
     ...a.base,
     targets: scaleTargets(a.base.targets, windowDays),
     tripDays: a.days,
     windowDays,
     background: w.amounts,
-    locks: { ...a.base.locks, ...a.regularLocks },
-    includeFoodIds: capFruit(dueFoods(a.includeFoodIds, w.seen, a.history, a.date, a.base.maxDistinctFoods), a.base.fruit?.maxKinds),
+    locks,
+    includeFoodIds: capFruit([...fromPantry, ...due].slice(0, slots), maxKinds),
   };
 }
 

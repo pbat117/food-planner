@@ -131,3 +131,35 @@ describe('trip guards', () => {
     expect(input.includeFoodIds).toEqual(['banana', 'orange', 'kiwi']);
   });
 });
+
+describe('review fixes', () => {
+  it('locked fruits use up fruit kinds, so due fruits never make the trip infeasible', () => {
+    const input = buildTripInput(args({
+      base: { ...base, maxDistinctFoods: 12, fruit: { gramsPerDay: 300, maxKinds: 5 } },
+      regularLocks: { banana: 200, blueberries: 100 },
+      includeFoodIds: ['apple', 'orange', 'kiwi', 'pear', 'grapes', 'banana', 'chicken-breast'],
+    }));
+    const fruits = input.includeFoodIds!.filter((id) => ['apple', 'orange', 'kiwi', 'pear', 'grapes', 'banana'].includes(id));
+    expect(fruits.length).toBeLessThanOrEqual(3);
+    expect(input.includeFoodIds).not.toContain('banana');
+    expect(input.includeFoodIds).toContain('chicken-breast');
+  });
+
+  it('a locked fruit trip still plans real food', async () => {
+    const t = await planTrip(args({
+      base: { ...base, maxDistinctFoods: 12, fruit: { gramsPerDay: 300, maxKinds: 5 } },
+      regularLocks: { banana: 200, blueberries: 100 },
+      includeFoodIds: ['apple', 'orange', 'kiwi', 'pear', 'grapes', 'chicken-breast'],
+    }));
+    // Before the fix both solves were infeasible and the trip was just the two locked fruits (~260 kcal).
+    expect(t.plan.items.length).toBeGreaterThanOrEqual(8);
+    const e = t.plan.report.lines.energy;
+    expect(e.total).toBeGreaterThan(e.target! * 0.85);
+  }, 60000);
+
+  it('pantry food is used before buying other long-keepers', () => {
+    const input = buildTripInput(args({ pantry: { 'brown-rice': 450, oats: 5 } }));
+    expect(input.includeFoodIds).toContain('brown-rice');
+    expect(input.includeFoodIds).not.toContain('oats'); // less than a minimum amount left
+  });
+});

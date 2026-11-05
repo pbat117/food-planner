@@ -7,7 +7,7 @@ import { roundAmount } from '@/engine/rounding';
 import type { TripArgs, TripPlan } from '@/engine/tripPlan';
 import type { PlanInput } from '@/engine/types';
 import { DEFAULT_SETTINGS } from '@/lib/settings';
-import { AppStateProvider, useAppState } from '@/state/AppState';
+import { AppStateProvider, today, useAppState } from '@/state/AppState';
 
 afterEach(cleanup);
 beforeEach(() => localStorage.clear());
@@ -133,5 +133,25 @@ describe('AppState', () => {
     expect(out).toBeNull();
     expect(result.current.status).toBe('error');
     expect(result.current.error).toMatch(/age/i);
+  });
+});
+
+describe('AppState review fixes', () => {
+  it('a next trip date in the past starts the trip today', async () => {
+    const { result, calls } = setup([fakeTrip('A')]);
+    act(() => result.current.setSettings({ ...DEFAULT_SETTINGS, nextTripDate: '2020-01-01' }));
+    await act(async () => { await result.current.generate(); });
+    expect(calls[0].date).toBe(today());
+  });
+
+  it('changing the pantry updates the shown trip', async () => {
+    const t = fakeTrip('A', { fromPantry: { oats: 300 }, pantryAfter: { oats: 200 } });
+    t.plan = { ...t.plan, items: [roundAmount('oats', 300)] };
+    const { result } = setup([t]);
+    await act(async () => { await result.current.generate(); });
+    act(() => result.current.setPantry({}));
+    expect(result.current.trip!.fromPantry).toEqual({});
+    expect(result.current.trip!.buy.oats).toBe(1000);
+    expect(JSON.parse(localStorage.getItem('planner.lastTrip')!).buy.oats).toBe(1000);
   });
 });
