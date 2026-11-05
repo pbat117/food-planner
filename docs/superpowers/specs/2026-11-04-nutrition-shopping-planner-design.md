@@ -134,15 +134,38 @@ Variables: grams `x_f` for each candidate food (liked foods; if none, all non-di
   - B12 / B-complex: morning.
 - Disclaimer: general guidance, not medical advice; consult a doctor, especially if taking medication.
 
-## 8. Shopping trips
+## 8. Shopping trips (revised 2026-11-05: continuous, trip by trip)
 
-- **Schedule:** user picks shopping weekdays and time (e.g. Tuesday before lunch and Friday before lunch). The planning week runs from the first trip to the same time a week later. Each trip covers the days until the next trip (Tue → 3 days, Fri → 4 days).
-- **Perishables** (`shelfLifeDays` < 7): split across trips in proportion to days covered (3/7 and 4/7), rounded to units.
-- **Long-keeping foods:** not split; assigned whole to one trip to balance trip sizes, never later than first needed.
-- **Unsplittable units** (1 head broccoli): assigned to a single trip only if it stays fresh through its use; otherwise the app suggests a smaller pack size.
-- **Freshness gap:** if a trip covers more days than a perishable lasts (e.g. 4 days vs ground beef's 3), the trip's eating guide says so and suggests a fix: "freeze ¼ of the pack on purchase day" or "eat the beef in the first 3 days".
-- **Shopping view:** grouped by aisle, checkboxes, "I have this" toggle per row (moves to a greyed-out "Already have" section; still counts toward nutrients; optional "remember for next week").
-- **Eating guide per trip:** amounts to eat over that trip's days, plus daily hints.
+Replaces the weekday-schedule design. People shop at different rhythms, so planning is continuous: one trip after another, with no week boundaries. A strict 7-day schedule may come back later as an option.
+
+- **Schedule:** the user sets **"I shop every N days"** (1–7, default 3) and the date of the next trip (default today). Trips follow from there: e.g. Thu Nov 5 → Sun Nov 8 → Wed Nov 11 → …
+- **One trip at a time:** each trip gets its own plan covering exactly its N days. It is a short list, limited to at most **10 different foods per trip** by default (editable 6–20). It is never a slice of a longer list.
+- **Rolling 7-day nutrition:** a trip is planned so that the 7 days ending on the trip's last day meet the weekly targets at about 90% or more (protein 100%).
+  - The earlier days in that window are filled with what the user's previous trips actually planned. That food is fixed, and the new trip makes up what it lacked.
+  - With less than 7 days of history (the first trips), the targets scale to the days the history plus this trip cover. The first trip alone is N/7 of the weekly targets.
+  - Upper limits (sodium, saturated fat, added sugar, ULs) scale the same way.
+- **Variety comes from rotation:** the per-trip limit, plus the look-back, means consecutive trips naturally use different foods.
+- **Your foods appear regularly:** each "Your food" must be in the current trip if it wasn't in any trip during the earlier part of the window. If more are due than fit, the ones absent longest come first.
+- **Pantry carry-over:**
+  - Long-keeping foods (`shelfLifeDays` ≥ 7) are bought in whole packages (e.g. a 900 g bag of rice). What the trip doesn't use is kept in a pantry.
+  - The next trip eats from the pantry first and buys only when the pantry runs short.
+  - The pantry is shown on the trip screen, and the user can correct it ("I'm out of rice").
+- **Perishables** (`shelfLifeDays` < 7) are bought for the trip's days only. If the trip covers more days than the food keeps, the trip says so and suggests freezing part on shopping day, or eating it in the first days.
+- **Finishing a trip:** the user taps **"Done shopping"**. The trip is saved to the history (date, days, daily amounts, what was bought), and the next trip can be planned for date + N. History older than 14 days is dropped. Until the user taps it, the current trip stays as it is.
+- **Shopping view:**
+  - grouped by aisle, with checkboxes
+  - "I have this" per row: moves the row to a greyed "Already have" section; it is still counted in the nutrients
+  - grams beside estimated items on every row
+
+## 8a. Regular recipes (revised 2026-11-05)
+
+"Regular items" become small recipes the user always makes, e.g. **Protein shake**: 30 g whey, 250 g milk, 1 banana, **5 times a week**.
+
+- Each regular recipe has a name, ingredients (food plus grams per serving), and times per week (1–14).
+- **Per trip**, each ingredient is fixed at `grams × timesPerWeek / 7 × N days`. These amounts are locked: the optimizer plans around them.
+- They appear on the shopping list like any food, and the trip shows "Protein shake: about 2 servings this trip".
+- Only what the user enters: there is no default recipe.
+- Existing single-food regular items are migrated to a one-ingredient recipe at 7× a week.
 
 ## 9. Recipe input (no AI)
 
@@ -172,7 +195,8 @@ The weekly list (and each trip's list) follows the user's sample `Weekly_Food_Li
 - Principles: clarity, deference, depth. System font stack (SF Pro on Apple devices), iOS type scale (Large Title, Headline, Body, Footnote), Dynamic-Type-friendly sizing, iOS system colors, automatic dark mode, inset grouped lists, bottom sheets, segmented controls, steppers, switches, swipe actions, ≥ 44 pt tap targets, iOS-like motion. SF-Symbols-style open-source line icons (SF Symbols themselves are licensed for Apple platforms only).
 - **Tabs:**
   1. **This Week** — summary card (kcal/day vs target, protein, nutrients on target), recipes with steppers, ingredient totals (grams + roughly), Analyze, Suggest bowls. Sheets: Nutrient Report, Now vs New.
-  2. **Shopping** — segmented control per trip, aisle groups, checkboxes, "I have this", eating guide.
+  1b. **This Trip** (replaces This Week, 2026-11-05) — the current trip: list in the 10b format for the trip's days, rolling 7-day nutrient report, pantry, Done shopping.
+  2. **Shopping** — the current trip's checklist by aisle, checkboxes, "I have this".
   3. **Recipes** — library, + → Paste / Enter manually → review.
   4. **Profile** — body stats, goal, protein goal, liked/disliked foods, supplements & schedule, shopping schedule, max distinct foods, bowl meals/day, sign out.
 
