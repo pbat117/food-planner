@@ -1,8 +1,7 @@
-import type { WeekPlan } from '@/engine/planWeek';
-import type { PlanInput } from '@/engine/types';
+import type { TripArgs, TripPlan } from '@/engine/tripPlan';
 
-export type WorkerRequest = { id: number; input: PlanInput };
-export type WorkerResponse = { id: number; ok: true; plan: WeekPlan } | { id: number; ok: false; error: string };
+export type WorkerRequest = { id: number; args: TripArgs };
+export type WorkerResponse = { id: number; ok: true; trip: TripPlan } | { id: number; ok: false; error: string };
 
 export interface WorkerLike {
   postMessage(m: WorkerRequest): void;
@@ -12,14 +11,14 @@ export interface WorkerLike {
 }
 
 export interface PlanClient {
-  requestPlan(input: PlanInput): Promise<WeekPlan>;
+  requestTrip(args: TripArgs): Promise<TripPlan>;
 }
 
 /** Talks to the solver worker; the worker is created on the first request. */
 export function createPlanClient(makeWorker: () => WorkerLike): PlanClient {
   let worker: WorkerLike | null = null;
   let nextId = 1;
-  const pending = new Map<number, { resolve(p: WeekPlan): void; reject(e: Error): void }>();
+  const pending = new Map<number, { resolve(t: TripPlan): void; reject(e: Error): void }>();
 
   function ensureWorker(): WorkerLike {
     if (worker) return worker;
@@ -28,7 +27,7 @@ export function createPlanClient(makeWorker: () => WorkerLike): PlanClient {
       const p = pending.get(data.id);
       if (!p) return;
       pending.delete(data.id);
-      if (data.ok) p.resolve(data.plan);
+      if (data.ok) p.resolve(data.trip);
       else p.reject(new Error(data.error));
     };
     w.onerror = (message) => {
@@ -41,8 +40,8 @@ export function createPlanClient(makeWorker: () => WorkerLike): PlanClient {
   }
 
   return {
-    requestPlan(input) {
-      return new Promise<WeekPlan>((resolve, reject) => {
+    requestTrip(args) {
+      return new Promise<TripPlan>((resolve, reject) => {
         let w: WorkerLike;
         try {
           w = ensureWorker();
@@ -52,7 +51,7 @@ export function createPlanClient(makeWorker: () => WorkerLike): PlanClient {
         }
         const id = nextId++;
         pending.set(id, { resolve, reject });
-        w.postMessage({ id, input });
+        w.postMessage({ id, args });
       });
     },
   };

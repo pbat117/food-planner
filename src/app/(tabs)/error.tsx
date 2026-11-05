@@ -3,7 +3,7 @@
 export default function TabError() {
   const startOver = () => {
     try {
-      localStorage.removeItem('planner.lastPlan');
+      localStorage.removeItem('planner.lastTrip');
     } catch {
       // storage blocked: nothing to clear
     }

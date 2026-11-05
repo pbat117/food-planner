@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { WeekPlan } from '@/engine/planWeek';
-import type { PlanInput } from '@/engine/types';
+import type { TripArgs, TripPlan } from '@/engine/tripPlan';
 import { createPlanClient, type WorkerLike, type WorkerRequest, type WorkerResponse } from '@/lib/planClient';
 
 function fakeWorker() {
@@ -15,28 +14,28 @@ function fakeWorker() {
   return w;
 }
 
-const input = { maxDistinctFoods: 1 } as unknown as PlanInput;
-const planA = { items: [], relaxed: ['vitD'] } as unknown as WeekPlan;
-const planB = { items: [], relaxed: ['iron'] } as unknown as WeekPlan;
+const input = { days: 3 } as unknown as TripArgs;
+const planA = { date: '2026-11-05' } as unknown as TripPlan;
+const planB = { date: '2026-11-08' } as unknown as TripPlan;
 
 describe('planClient', () => {
-  it('requestPlan resolves with the plan for its id', async () => {
+  it('requestTrip resolves with the plan for its id', async () => {
     const w = fakeWorker();
     let made = 0;
     const client = createPlanClient(() => { made++; return w; });
-    const a = client.requestPlan(input);
-    const b = client.requestPlan(input);
+    const a = client.requestTrip(input);
+    const b = client.requestTrip(input);
     expect(made).toBe(1);
-    w.reply({ id: w.sent[1].id, ok: true, plan: planB });
-    w.reply({ id: w.sent[0].id, ok: true, plan: planA });
+    w.reply({ id: w.sent[1].id, ok: true, trip: planB });
+    w.reply({ id: w.sent[0].id, ok: true, trip: planA });
     await expect(a).resolves.toBe(planA);
     await expect(b).resolves.toBe(planB);
   });
 
-  it('requestPlan rejects with a readable message when the worker posts an error', async () => {
+  it('requestTrip rejects with a readable message when the worker posts an error', async () => {
     const w = fakeWorker();
     const client = createPlanClient(() => w);
-    const p = client.requestPlan(input);
+    const p = client.requestTrip(input);
     w.reply({ id: w.sent[0].id, ok: false, error: 'Solver failed' });
     await expect(p).rejects.toThrow('Solver failed');
   });
@@ -44,17 +43,17 @@ describe('planClient', () => {
   it('a crashed worker rejects pending requests and is recreated', async () => {
     const workers: ReturnType<typeof fakeWorker>[] = [];
     const client = createPlanClient(() => { const w = fakeWorker(); workers.push(w); return w; });
-    const p = client.requestPlan(input);
+    const p = client.requestTrip(input);
     workers[0].onerror?.('Could not load the solver');
     await expect(p).rejects.toThrow('Could not load the solver');
-    const q = client.requestPlan(input);
+    const q = client.requestTrip(input);
     expect(workers.length).toBe(2);
-    workers[1].reply({ id: workers[1].sent[0].id, ok: true, plan: planA });
+    workers[1].reply({ id: workers[1].sent[0].id, ok: true, trip: planA });
     await expect(q).resolves.toBe(planA);
   });
 
   it('rejects when the worker cannot be created', async () => {
     const client = createPlanClient(() => { throw new Error('no workers here'); });
-    await expect(client.requestPlan(input)).rejects.toThrow('no workers here');
+    await expect(client.requestTrip(input)).rejects.toThrow('no workers here');
   });
 });

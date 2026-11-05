@@ -54,6 +54,7 @@ export const SETTINGS_KEY = 'planner.settings';
 export interface KeyValueStore {
   getItem(k: string): string | null;
   setItem(k: string, v: string): void;
+  removeItem?(k: string): void;
 }
 
 export function defaultStore(): KeyValueStore | null {
