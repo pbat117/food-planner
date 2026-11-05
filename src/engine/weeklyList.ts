@@ -112,7 +112,7 @@ export function buildWeeklyList(plan: WeekPlan): WeeklyList {
     name: s.label,
     grams: 0,
     gramsText: `${s.dailyDose.toLocaleString('en-US')} ${NUTRIENTS[s.nutrient].unit} a day`,
-    itemsText: '7 daily doses, per label',
+    itemsText: `${plan.input.tripDays ?? 7} daily doses, per label`,
     locked: true,
   }));
   if (supps.length) bySection.set('Supplements and extras', supps);

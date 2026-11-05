@@ -41,7 +41,7 @@ export interface AppState {
   generate(overrides?: Partial<PlanInput>, opts?: GenerateOptions): Promise<WeekPlan | null>;
   applyPlan(p: WeekPlan): void;
   /** Done shopping: records what this trip feeds you, updates the pantry and moves to the next trip. */
-  finishShopping(notBought: string[]): void;
+  finishShopping(notBought: string[], have?: string[]): void;
   undo(): void;
   canUndo: boolean;
 }
@@ -214,10 +214,10 @@ export function AppStateProvider({
     [client, applyPlan],
   );
 
-  const finishShopping = useCallback((notBought: string[]) => {
+  const finishShopping = useCallback((notBought: string[], have: string[] = []) => {
     const t = tripRef.current;
     if (!t) return;
-    const done = finishTrip(t, historyRef.current, notBought);
+    const done = finishTrip(t, historyRef.current, notBought, have);
     historyRef.current = done.history;
     setHistory(done.history);
     saveTrips(done.history);

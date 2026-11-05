@@ -1,5 +1,5 @@
-import { ComingSoon } from '@/screens/ComingSoon';
+import { ShoppingScreen } from '@/screens/ShoppingScreen';
 
 export default function ShoppingPage() {
-  return <ComingSoon title="Shopping" text="Coming soon: your list split by shopping trip, so fresh food is bought when you need it." />;
+  return <ShoppingScreen />;
 }

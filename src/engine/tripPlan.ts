@@ -92,6 +92,13 @@ export function dueFoods(include: string[], seen: Set<string>, history: TripReco
   return order.slice(0, Math.max(0, Math.floor(maxFoods / 2))).map((o) => o.id);
 }
 
+/** Forcing more fruits than the fruit rule allows would make the plan impossible. */
+function capFruit(ids: string[], maxKinds?: number): string[] {
+  if (maxKinds === undefined) return ids;
+  let n = 0;
+  return ids.filter((id) => getFood(id).category !== 'fruit' || ++n <= maxKinds);
+}
+
 export function buildTripInput(a: TripArgs): PlanInput {
   const w = historyWindow(a.history, a.date, a.days);
   const windowDays = Math.min(7, a.days + w.days);
@@ -102,7 +109,7 @@ export function buildTripInput(a: TripArgs): PlanInput {
     windowDays,
     background: w.amounts,
     locks: { ...a.base.locks, ...a.regularLocks },
-    includeFoodIds: dueFoods(a.includeFoodIds, w.seen, a.history, a.date, a.base.maxDistinctFoods),
+    includeFoodIds: capFruit(dueFoods(a.includeFoodIds, w.seen, a.history, a.date, a.base.maxDistinctFoods), a.base.fruit?.maxKinds),
   };
 }
 
@@ -143,8 +150,11 @@ export async function planTrip(a: TripArgs): Promise<TripPlan> {
   return { date: a.date, days: a.days, plan, ...purchase(plan.items, a.pantry) };
 }
 
-/** Records what the trip feeds you and updates the pantry. Things not bought are not eaten. */
-export function finishTrip(t: TripPlan, history: TripRecord[], notBought: string[]) {
+/**
+ * Records what the trip feeds you and updates the pantry.
+ * notBought: not eaten (except what came from the pantry). have: you already had it, so it is eaten but no package was bought.
+ */
+export function finishTrip(t: TripPlan, history: TripRecord[], notBought: string[], have: string[] = []) {
   const skip = new Set(notBought);
   const daily: Record<string, number> = {};
   for (const i of t.plan.items) {
@@ -154,7 +164,7 @@ export function finishTrip(t: TripPlan, history: TripRecord[], notBought: string
   const cutoff = toMs(addDays(t.date, -HISTORY_KEEP_DAYS));
   const kept = history.filter((r) => toMs(addDays(r.date, r.days)) >= cutoff);
   const pantry = { ...t.pantryAfter };
-  for (const id of skip) {
+  for (const id of new Set([...skip, ...have])) {
     if (!keepsLong(id) || !(id in pantry)) continue;
     const left = pantry[id] - (t.buy[id] ?? 0);
     if (left > 0.5) pantry[id] = left;

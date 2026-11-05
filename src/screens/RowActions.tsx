@@ -40,7 +40,7 @@ export function RowActions({
 
   return (
     <Sheet open onClose={onClose} title={food.name}>
-      <GroupedList header="Amount this week" footer={
+      <GroupedList header="Amount this trip" footer={
         grams === item?.grams ? 'Change the amount to see what it does to your nutrients.'
           : `${kcalNow.toLocaleString('en-US')} → ${kcalNew.toLocaleString('en-US')} kcal a day. ${
             changed.length ? changed.map((id) => `${NUTRIENTS[id].name} becomes ${preview.report.lines[id].status === 'ok' ? 'on target' : preview.report.lines[id].status}`).join('; ') + '.' : 'No nutrient changes status.'}`

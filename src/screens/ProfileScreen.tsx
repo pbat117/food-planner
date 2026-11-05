@@ -1,6 +1,7 @@
 'use client';
 
 import { Plus, Trash2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FOODS, getFood } from '@/data/foods';
 import { NUTRIENTS } from '@/data/nutrients';
@@ -28,6 +29,7 @@ const ACTIVITIES: { value: Activity; label: string }[] = [
 ];
 
 export function ProfileScreen() {
+  const router = useRouter();
   const { settings, setSettings, ready } = useAppState();
   const [picker, setPicker] = useState<PickerFilter | null>(null);
   const [addSupp, setAddSupp] = useState(false);
@@ -125,17 +127,31 @@ export function ProfileScreen() {
         <Row title={<span className="inline-flex items-center gap-2 text-tint"><Plus className="size-5" />Add a supplement</span>} onClick={() => setAddSupp(true)} />
       </GroupedList>
 
-      <GroupedList header="Regular items" footer="Things you always have each week, like your own shake. They're counted exactly as entered.">
+      <GroupedList header="Regular items" footer="Things you always have each week. Single foods are entered per week; recipes, like your protein shake, are added on the Recipes tab with how often you have them.">
         {Object.entries(settings.regularItems).map(([id, g]) => (
           <Row key={id} title={getFood(id).name} detail={`${g.toLocaleString('en-US')} g a week`}
             accessory={<button type="button" aria-label={`Remove ${getFood(id).name}`} className="flex size-11 items-center justify-center text-red"
               onClick={() => { const r = { ...settings.regularItems }; delete r[id]; set({ regularItems: r }); }}><Trash2 className="size-5" /></button>} />
         ))}
+        {settings.regularRecipes.map((rr) => {
+          const r = settings.recipes.find((x) => x.id === rr.recipeId);
+          return r ? (
+            <Row key={rr.recipeId} title={r.name} subtitle={`Recipe · ${rr.timesPerWeek}× a week`}
+              accessory={<button type="button" aria-label={`Remove ${r.name}`} className="flex size-11 items-center justify-center text-red"
+                onClick={() => set({ regularRecipes: settings.regularRecipes.filter((x) => x.recipeId !== rr.recipeId) })}><Trash2 className="size-5" /></button>} />
+          ) : null;
+        })}
         <Row title={<span className="inline-flex items-center gap-2 text-tint"><Plus className="size-5" />Add a regular item</span>} onClick={() => setAddRegular(true)} />
+        <Row title={<span className="inline-flex items-center gap-2 text-tint"><Plus className="size-5" />Add a regular recipe</span>} onClick={() => router.push('/recipes')} />
       </GroupedList>
 
-      <GroupedList header="Variety" footer="The most different foods on one week's list (fewer means a simpler shop).">
-        <Row title="Different foods" accessory={<Stepper label="Different foods" value={settings.maxDistinctFoods} min={10} max={30} step={1}
+      <GroupedList header="Shopping" footer="Each trip buys food for the days until your next trip. Fewer foods per trip means a simpler shop; your foods rotate through the trips.">
+        <Row title="Shop every" accessory={<Stepper label="Days between trips" value={settings.shopEveryDays} min={1} max={7} step={1}
+          format={(d) => (d === 1 ? '1 day' : `${d} days`)} onChange={(shopEveryDays) => set({ shopEveryDays })} />} />
+        <Row title="Next trip" accessory={<input type="date" aria-label="Next trip date" value={settings.nextTripDate}
+          onChange={(e) => set({ nextTripDate: e.target.value })}
+          className="min-h-11 bg-transparent text-right text-body text-tint outline-none" />} />
+        <Row title="Foods per trip" accessory={<Stepper label="Foods per trip" value={settings.maxDistinctFoods} min={6} max={20} step={1}
           onChange={(maxDistinctFoods) => set({ maxDistinctFoods })} />} />
       </GroupedList>
 

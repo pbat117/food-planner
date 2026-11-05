@@ -100,6 +100,18 @@ describe('trip planning', () => {
     expect(r.history[0].daily['brown-rice']).toBeCloseTo(100 / 3, 6);
   });
 
+  it('finishTrip: things you already had are eaten but add nothing to the pantry', () => {
+    const t: TripPlan = {
+      date: '2026-11-05', days: 3,
+      buy: { 'brown-rice': 900, banana: 354 }, fromPantry: {}, pantryAfter: { 'brown-rice': 400 },
+      plan: { items: [roundAmount('brown-rice', 500), roundAmount('banana', 354)], report: {} as never, relaxed: [], input: base },
+    };
+    const r = finishTrip(t, [], [], ['brown-rice', 'banana']);
+    expect(r.pantry).toEqual({});
+    expect(r.history[0].daily.banana).toBeCloseTo(354 / 3, 6);
+    expect(r.history[0].daily['brown-rice']).toBeCloseTo(500 / 3, 6);
+  });
+
   it('planTrip second trip differs from the first and the window is on target', async () => {
     const a = args({ base: { ...base, maxDistinctFoods: 12 }, includeFoodIds: liked });
     const t1 = await planTrip(a);
@@ -110,4 +122,12 @@ describe('trip planning', () => {
     expect(t2.plan.input.windowDays).toBe(6);
     expect(t2.plan.report.lines.energy.status).toBe('ok');
   }, 60000);
+});
+
+describe('trip guards', () => {
+  it('never forces more fruits than the fruit rule allows', () => {
+    const fruits = ['banana', 'orange', 'kiwi', 'blackberries', 'apple', 'pear'];
+    const input = buildTripInput(args({ base: { ...base, maxDistinctFoods: 20, fruit: { gramsPerDay: 300, maxKinds: 3 } }, includeFoodIds: fruits }));
+    expect(input.includeFoodIds).toEqual(['banana', 'orange', 'kiwi']);
+  });
 });

@@ -48,3 +48,11 @@ describe('engine trip support', () => {
     expect(a.lines.vitD.sources.find((s) => s.kind === 'supplement')!.amount).toBe(175);
   });
 });
+
+describe('trip list text', () => {
+  it('supplement doses follow the trip length', async () => {
+    const plan = await planWeek({ ...base, tripDays: 3, windowDays: 3, supplements: [{ nutrient: 'vitD', dailyDose: 25, label: 'D3' }] });
+    const rows = buildWeeklyList(plan).sections.flatMap((s) => s.rows);
+    expect(rows.find((r) => r.foodId.startsWith('supp:'))!.itemsText).toBe('3 daily doses, per label');
+  }, 30000);
+});

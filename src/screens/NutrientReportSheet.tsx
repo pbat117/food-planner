@@ -34,9 +34,9 @@ export function NutrientReportSheet({
   return (
     <Sheet open={open} onClose={onClose} title="Nutrient report">
       <p className="mx-8 mb-4 text-center text-subhead text-secondary">
-        {okCount} of {rows.length} on target for the week. 90% or more counts as on target. Protein aims for your full goal.
+        {okCount} of {rows.length} on target for the last 7 days (earlier trips plus this one). 90% or more counts as on target. Protein aims for your full goal.
       </p>
-      <GroupedList footer="Percent of the weekly target. Sodium, saturated fat and added sugar show percent of the upper limit. Tap a nutrient that's low or high for ideas.">
+      <GroupedList footer="Percent of the target for those days. Sodium, saturated fat and added sugar show percent of the upper limit. Tap a nutrient that's low or high for ideas.">
         {rows.map((r) => {
           const expandable = r.status !== 'ok';
           const expanded = openId === r.nutrient;

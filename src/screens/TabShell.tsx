@@ -6,7 +6,7 @@ import { AppStateProvider } from '@/state/AppState';
 import { TabBar } from '@/ui/TabBar';
 
 const TABS = [
-  { href: '/week', label: 'This Week', icon: CalendarDays },
+  { href: '/week', label: 'This Trip', icon: CalendarDays },
   { href: '/shopping', label: 'Shopping', icon: ShoppingCart },
   { href: '/recipes', label: 'Recipes', icon: BookOpen },
   { href: '/profile', label: 'Profile', icon: User },
