@@ -157,15 +157,16 @@ Replaces the weekday-schedule design. People shop at different rhythms, so plann
   - "I have this" per row: moves the row to a greyed "Already have" section; it is still counted in the nutrients
   - grams beside estimated items on every row
 
-## 8a. Regular recipes (revised 2026-11-05)
+## 8a. Regular items and recipes (revised 2026-11-05)
 
-"Regular items" become small recipes the user always makes, e.g. **Protein shake**: 30 g whey, 250 g milk, 1 banana, **5 times a week**.
+Regular items stay as they are: a **food** plus an amount the user always eats. In addition, a **recipe** can be put into Regular items with a frequency.
 
-- Each regular recipe has a name, ingredients (food plus grams per serving), and times per week (1–14).
-- **Per trip**, each ingredient is fixed at `grams × timesPerWeek / 7 × N days`. These amounts are locked: the optimizer plans around them.
-- They appear on the shopping list like any food, and the trip shows "Protein shake: about 2 servings this trip".
-- Only what the user enters: there is no default recipe.
-- Existing single-food regular items are migrated to a one-ingredient recipe at 7× a week.
+- **Recipes:** on the Recipes tab the user adds a recipe by hand, with a name and ingredients (food plus grams). Recipes are saved in a recipe library. Pasting a recipe in comes later (Phase 4).
+- **Making a recipe regular:** when adding or editing a recipe, a **"Regular item"** switch with **times per week** (1–14) puts it in Profile → Regular items, e.g. "Protein shake, 5× a week". It can also be removed from Regular items there, and the recipe stays in the library.
+- **Planning:** for each trip of N days, a regular recipe's ingredients are fixed at `grams × timesPerWeek / 7 × N`. Single-food regular items are fixed at `weekly grams / 7 × N`.
+  - These amounts are locked, and the optimizer plans the rest around them.
+  - They appear on the shopping list like any food, and the trip shows "Protein shake: about 2 servings this trip".
+- Only what the user enters: there are no default recipes or regular items.
 
 ## 9. Recipe input (no AI)
 
