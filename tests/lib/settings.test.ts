@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { planWeek } from '@/engine/planWeek';
 import {
-  DEFAULT_SETTINGS, type KeyValueStore, loadSettings, prefOf, saveSettings, setPref, type Settings, toPlanInput,
+  DEFAULT_SETTINGS, deleteRecipe, type KeyValueStore, loadSettings, prefOf, regularLocksFor, regularServings, saveSettings, setPref,
+  type Settings, toPlanInput,
 } from '@/lib/settings';
 
 function memStore(initial: string | null = null): KeyValueStore & { data: Map<string, string> } {
@@ -90,5 +91,50 @@ describe('food preferences', () => {
   it('does not mutate its input', () => {
     setPref(s, 'kiwi', 'disliked');
     expect(s.includeFoodIds).toEqual(['kiwi']);
+  });
+});
+
+describe('trip settings', () => {
+  const shake = { id: 'r1', name: 'Protein shake', ingredients: [{ foodId: 'milk', grams: 250 }, { foodId: 'whey-protein', grams: 30 }] };
+  const withShake: Settings = {
+    ...DEFAULT_SETTINGS, regularItems: { milk: 1400 }, recipes: [shake], regularRecipes: [{ recipeId: 'r1', timesPerWeek: 5 }],
+  };
+
+  it('has trip defaults', () => {
+    expect(DEFAULT_SETTINGS.shopEveryDays).toBe(3);
+    expect(DEFAULT_SETTINGS.nextTripDate).toBe('');
+    expect(DEFAULT_SETTINGS.maxDistinctFoods).toBe(12);
+  });
+
+  it('regularLocksFor scales foods and recipes', () => {
+    const l = regularLocksFor(withShake, 3);
+    expect(l.milk).toBeCloseTo(600 + 535.714, 2);
+    expect(l['whey-protein']).toBeCloseTo(64.286, 2);
+  });
+
+  it('deleting a recipe drops its regular entry', () => {
+    const s = deleteRecipe(withShake, 'r1');
+    expect(s.recipes).toEqual([]);
+    expect(s.regularRecipes).toEqual([]);
+    expect(s.regularItems).toEqual({ milk: 1400 });
+  });
+
+  it('loadSettings validates recipes and regular recipes', () => {
+    const raw = {
+      ...withShake,
+      shopEveryDays: 0, nextTripDate: 'soon',
+      recipes: [{ ...shake, ingredients: [...shake.ingredients, { foodId: 'unicorn', grams: 5 }, { foodId: 'oats', grams: -1 }] }, { id: 7 }],
+      regularRecipes: [{ recipeId: 'r1', timesPerWeek: 99 }, { recipeId: 'gone', timesPerWeek: 2 }],
+    };
+    const s = loadSettings(memStore(JSON.stringify(raw)));
+    expect(s.shopEveryDays).toBe(3);
+    expect(s.nextTripDate).toBe('');
+    expect(s.recipes).toEqual([shake]);
+    expect(s.regularRecipes).toEqual([{ recipeId: 'r1', timesPerWeek: 14 }]);
+    expect(loadSettings(memStore(JSON.stringify({ ...raw, shopEveryDays: 4, nextTripDate: '2026-11-07' }))).nextTripDate).toBe('2026-11-07');
+  });
+
+  it('regularServings', () => {
+    expect(regularServings(withShake, 3)).toEqual([{ name: 'Protein shake', servings: 2.1 }]);
   });
 });
