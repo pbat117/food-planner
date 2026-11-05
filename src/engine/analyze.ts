@@ -79,5 +79,5 @@ export function analyze(
   }
 
   const weeklyCalories = lines.energy.total;
-  return { lines, weeklyCalories, dailyCalories: weeklyCalories / 7 };
+  return { lines, weeklyCalories, dailyCalories: weeklyCalories / windowDays };
 }
