@@ -126,6 +126,12 @@ export interface PlanInput {
   includeFoodIds?: string[];
   /** Always include fruit: at least gramsPerDay (×7 for the week), from at most maxKinds different fruits. */
   fruit?: { gramsPerDay: number; maxKinds: number };
+  /** Days this plan buys food for (default 7). Scales per-food caps and the fruit minimum. */
+  tripDays?: number;
+  /** Days the nutrient targets cover (default 7): earlier trips + this one. Scales supplements and daily averages. */
+  windowDays?: number;
+  /** Grams already eaten earlier in the window. Counted in nutrients; not bought, not shown, not in the food limit. */
+  background?: Record<string, number>;
 }
 
 export interface OptimizeResult {

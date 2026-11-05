@@ -14,7 +14,7 @@ export interface WeekPlan {
 export function reanalyze(items: RoundedAmount[], input: PlanInput): NutrientReport {
   const amounts: Record<string, number> = {};
   for (const i of items) amounts[i.foodId] = (amounts[i.foodId] ?? 0) + i.grams;
-  return analyze(amounts, input.recipes, input.supplements, input.targets);
+  return analyze(amounts, input.recipes, input.supplements, input.targets, { windowDays: input.windowDays, background: input.background });
 }
 
 /** optimize → round to buyable units → analyze what will actually be bought. */

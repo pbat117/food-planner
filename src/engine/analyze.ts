@@ -15,12 +15,16 @@ function statusOf(total: number, lowBelow?: number, max?: number): Status {
  * Totals the week's nutrients. `amounts` is foodId → weekly grams (free foods, bowls, locks);
  * recipes contribute their batch ingredients × count; supplements contribute dailyDose × 7.
  */
+export const EARLIER_TRIPS = 'Earlier trips';
+
 export function analyze(
   amounts: Record<string, number>,
   recipes: RecipeUse[],
   supplements: SupplementUse[],
   targets: WeeklyTargets,
+  opts: { windowDays?: number; background?: Record<string, number> } = {},
 ): NutrientReport {
+  const windowDays = opts.windowDays ?? 7;
   const ids = Object.keys(targets.nutrients) as NutrientId[];
   const sources = new Map<NutrientId, Source[]>(ids.map((id) => [id, []]));
 
@@ -48,8 +52,14 @@ export function analyze(
     flush(bucket, label, 'recipe');
   }
 
+  if (opts.background) {
+    const bucket = new Map<NutrientId, number>();
+    for (const [foodId, grams] of Object.entries(opts.background)) if (grams > 0) addFoodGrams(foodId, grams, bucket);
+    flush(bucket, EARLIER_TRIPS, 'recipe');
+  }
+
   for (const s of supplements) {
-    sources.get(s.nutrient)!.push({ label: `💊 ${s.label}`, kind: 'supplement', amount: s.dailyDose * 7 });
+    sources.get(s.nutrient)!.push({ label: `💊 ${s.label}`, kind: 'supplement', amount: s.dailyDose * windowDays });
   }
 
   const lines = {} as Record<NutrientId, NutrientLine>;

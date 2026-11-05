@@ -39,6 +39,10 @@ function num(v: number): string {
   return Number.isInteger(v) ? String(v) : v.toPrecision(12).replace(/\.?0+$/, '');
 }
 
+export function analyzeOpts(input: PlanInput): { windowDays?: number; background?: Record<string, number> } {
+  return { windowDays: input.windowDays, background: input.background };
+}
+
 /** Builds the mixed-integer LP (CPLEX LP format). Exported for inspection in tests. */
 export function buildLp(input: PlanInput): Model {
   const { targets } = input;
@@ -53,7 +57,9 @@ export function buildLp(input: PlanInput): Model {
 
   // Fixed contributions: recipes, locks, supplements.
   const fixedAmounts = Object.fromEntries(Object.entries(input.locks));
-  const fixed = analyze(fixedAmounts, input.recipes, input.supplements, targets).lines;
+  const fixed = analyze(fixedAmounts, input.recipes, input.supplements, targets, analyzeOpts(input)).lines;
+  const tripScale = (input.tripDays ?? 7) / 7;
+  const capOf = (f: Food) => Math.max(f.minGrams, f.maxWeeklyGrams * tripScale);
 
   const objective: string[] = [];
   const rows: string[] = [];
@@ -69,8 +75,8 @@ export function buildLp(input: PlanInput): Model {
   candidates.forEach((f, i) => {
     objective.push(`+ ${num(TIE_BREAK)} x${i}`);
     rows.push(`lo${i}: x${i} - ${num(f.minGrams)} y${i} >= 0`);
-    rows.push(`hi${i}: x${i} - ${num(f.maxWeeklyGrams)} y${i} <= 0`);
-    bounds.push(`0 <= x${i} <= ${num(f.maxWeeklyGrams)}`);
+    rows.push(`hi${i}: x${i} - ${num(capOf(f))} y${i} <= 0`);
+    bounds.push(`0 <= x${i} <= ${num(capOf(f))}`);
     binaries.push(`y${i}`);
     if (included.has(f.id)) rows.push(`inc${i}: y${i} >= 1`);
   });
@@ -89,7 +95,7 @@ export function buildLp(input: PlanInput): Model {
     const recipeFruitGrams = input.recipes.reduce((s, r) => s + r.count * r.ingredients
       .filter((g) => getFood(g.foodId).category === 'fruit').reduce((t, g) => t + g.grams, 0), 0);
     const fixedFruit = lockedFruit.reduce((s, [, g]) => s + g, 0) + recipeFruitGrams;
-    const need = 7 * input.fruit.gramsPerDay - fixedFruit;
+    const need = (input.tripDays ?? 7) * input.fruit.gramsPerDay - fixedFruit;
     if (fruitIdx.length) {
       const kinds = Math.max(0, input.fruit.maxKinds - lockedFruit.length);
       rows.push(`fruitkinds: ${fruitIdx.map((i) => `+ y${i}`).join(' ')} <= ${kinds}`);
@@ -187,7 +193,7 @@ export async function optimize(input: PlanInput): Promise<OptimizeResult> {
   const second = await solveOnce({ ...input, maxDistinctFoods: input.maxDistinctFoods + 5 });
   if (second) return second;
 
-  const report = analyze(input.locks, input.recipes, input.supplements, input.targets);
+  const report = analyze(input.locks, input.recipes, input.supplements, input.targets, analyzeOpts(input));
   const relaxed = (Object.keys(report.lines) as NutrientId[]).filter((id) => report.lines[id].status === 'low');
   return { amounts: { ...input.locks }, relaxed, status: 'fallback' };
 }

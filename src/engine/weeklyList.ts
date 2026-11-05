@@ -145,7 +145,8 @@ export function buildWeeklyList(plan: WeekPlan): WeeklyList {
   }
   notes.push(IODIZED_SALT_NOTE, ESTIMATES_NOTE);
 
-  const day = (id: NutrientId) => Math.round(lines[id].total / 7);
+  const windowDays = plan.input.windowDays ?? 7;
+  const day = (id: NutrientId) => Math.round(lines[id].total / windowDays);
   return {
     sections,
     dailyAverage: { kcal: day('energy'), protein: day('protein'), carbs: day('carbs'), fat: day('fat'), fiber: day('fiber') },
